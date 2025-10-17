@@ -18,7 +18,7 @@ do{
     cout <<margenTitulo<< "|____/ \\__,_|_| |_|\\__,_| |____/ \\__,_|_| |_|\\__,_| |____/ \\___/|_|  \\__| " << endl<<endl<<endl;
 
     cout<<margenMenu<<" =========================="<<endl;
-    cout<<margenMenu<<"||  1 - TURNO             ||"<<endl;
+    cout<<margenMenu<<"||  1 - TURNOOOOOOO       ||"<<endl;
     cout<<margenMenu<<"||                        ||"<<endl;
     cout<<margenMenu<<"||  2 - PACIENTE          ||"<<endl;
     cout<<margenMenu<<"||                        ||"<<endl;
