@@ -10,7 +10,7 @@ void menuPrincipal(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
-cout<<"manejando GitHub somos unos muertos"<<endl;
+cout<<"manejando GitHub somos unos muertos, pero vamos aprendiendo"<<endl;
 do{
     rlutil::cls();
     cout <<margenTitulo<< " ____                      ____                      ____         __ _    " << endl;
