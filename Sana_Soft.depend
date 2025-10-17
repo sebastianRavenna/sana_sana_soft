@@ -5,3 +5,28 @@
 
 1760708597 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuprincipal.h
 
+1760704682 source:c:\users\tim\documents\github\sana_sana_soft\main.cpp
+	<iostream>
+	"menuPrincipal.h"
+
+1760708583 c:\users\tim\documents\github\sana_sana_soft\menuprincipal.h
+
+1760709146 source:c:\users\tim\documents\github\sana_sana_soft\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760704682 c:\users\tim\documents\github\sana_sana_soft\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
