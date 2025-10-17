@@ -1,6 +1,8 @@
 #include<iostream>
-using namespace std;
 #include "rlutil.h"
+#include "menuPrincipal.h"
+using namespace std;
+
 
 
 void menuPrincipal(){
