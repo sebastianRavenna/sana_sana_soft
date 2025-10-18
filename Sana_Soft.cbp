@@ -54,6 +54,8 @@
 		<Unit filename="MenuReportes.h" />
 		<Unit filename="MenuTurno.cpp" />
 		<Unit filename="MenuTurno.h" />
+		<Unit filename="Paciente.cpp" />
+		<Unit filename="Paciente.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
 		<Unit filename="main.cpp" />
