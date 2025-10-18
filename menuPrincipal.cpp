@@ -1,6 +1,14 @@
 #include<iostream>
 #include "rlutil.h"
-#include "menuPrincipal.h"
+#include "MenuPrincipal.h"
+#include "MenuFacturacion.h"
+#include "MenuListados.h"
+#include "MenuMedico.h"
+#include "MenuObraSocial.h"
+#include "MenuPaciente.h"
+#include "MenuReportes.h"
+#include "MenuTurno.h"
+
 using namespace std;
 
 
@@ -10,7 +18,7 @@ void menuPrincipal(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
-cout<<"manejando GitHub somos unos muertos, pero vamos aprendiendo"<<endl;
+
 do{
     rlutil::cls();
     cout <<margenTitulo<< " ____                      ____                      ____         __ _    " << endl;
@@ -19,73 +27,73 @@ do{
     cout <<margenTitulo<< " ___) | (_| | | | | (_| |  ___) | (_| | | | | (_| |  ___) | (_) |  _| |_  " << endl;
     cout <<margenTitulo<< "|____/ \\__,_|_| |_|\\__,_| |____/ \\__,_|_| |_|\\__,_| |____/ \\___/|_|  \\__| " << endl<<endl<<endl;
 
-    cout<<margenMenu<<" =========================="<<endl;
-    cout<<margenMenu<<"||  1 - TURNOOOOOOO       ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  2 - PACIENTE          ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  3 - MDICO            ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  4 - OBRA SOCIAL       ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  5 - FACTURACION       ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  6 - LISTADOS          ||"<<endl;
-    cout<<margenMenu<<"||                        ||"<<endl;
-    cout<<margenMenu<<"||  7 - REPORTES          ||"<<endl;
-    cout<<margenMenu<<"||========================||"<<endl;
-    cout<<margenMenu<<"||  0 - SALIR             ||"<<endl;
-    cout<<margenMenu<<" =========================="<<endl<<endl;
+    cout<<margenMenu<<" =============================="<<endl;
+    cout<<margenMenu<<"||  1 - TURNO                 ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  2 - PACIENTE              ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  3 - MDICO                ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  4 - OBRA SOCIAL           ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  5 - FACTURACION           ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  6 - LISTADOS              ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  7 - REPORTES              ||"<<endl;
+    cout<<margenMenu<<"||============================||"<<endl;
+    cout<<margenMenu<<"||  0 - SALIR                 ||"<<endl;
+    cout<<margenMenu<<" =============================="<<endl<<endl;
 
     cout<<margenMenu<<"Ingrese la opcion deseada: ";
     cin>> numeroInicio;
 
     while(numeroInicio>7||numeroInicio<0){
-        cout<<"Numero incorrecto"<<endl;
-        cout<<"Ingrese la opcion deseada: ";
+        cout<<margenMenu<<"Numero incorrecto"<<endl;
+        cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
     }
+
 
     switch(numeroInicio){
         case 1:
             rlutil::cls();
-            cout<<"Turno";
+            menuTurno();
         break;
 
         case 2:
             rlutil::cls();
-            cout<<"Paciente";
+            menuPaciente();
         break;
 
         case 3:
             rlutil::cls();
-            cout<<"Medico";
+            menuMedico();
         break;
 
         case 4:
             rlutil::cls();
-            cout<<"Obra Social";
+            menuObraSocial();
         break;
 
         case 5:
             rlutil::cls();
-            cout<<"Facturacion";
+            menuFacturacion();
         break;
 
         case 6:
             rlutil::cls();
-            cout<<"Listados";
+            menuListado();
         break;
 
         case 7:
             rlutil::cls();
-            cout<<"Reportes";
+            menuReportes();
         break;
 
         case 0:
             rlutil::cls();
             cout<<"Chau";
-            rlutil::anykey();
 
         return;
     }

@@ -30,3 +30,78 @@
 	<sys/types.h>
 	<sys/time.h>
 
+1760795065 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"MenuPrincipal.h"
+	"MenuFacturacion.h"
+	"MenuListados.h"
+	"MenuMedico.h"
+	"MenuObraSocial.h"
+	"MenuPaciente.h"
+	"MenuReportes.h"
+	"MenuTurno.h"
+
+1760704745 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1760794460 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menufacturacion.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794460 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794703 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menumedico.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794970 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794703 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794460 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760794460 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuturno.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760791613 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menufacturacion.h
+
+1760792855 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.h
+
+1760792736 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menumedico.h
+
+1760792811 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.h
+
+1760792737 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.h
+
+1760792779 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.h
+
+1760792762 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuturno.h
+

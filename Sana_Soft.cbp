@@ -34,11 +34,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Persona.cpp" />
-		<Unit filename="Persona.h" />
+		<Unit filename="MenuFacturacion.cpp" />
+		<Unit filename="MenuFacturacion.h" />
+		<Unit filename="MenuListados.cpp" />
+		<Unit filename="MenuListados.h" />
+		<Unit filename="MenuMedico.cpp" />
+		<Unit filename="MenuMedico.h" />
+		<Unit filename="MenuObraSocial.cpp" />
+		<Unit filename="MenuObraSocial.h" />
+		<Unit filename="MenuPaciente.cpp" />
+		<Unit filename="MenuPaciente.h" />
+		<Unit filename="MenuPrincipal.cpp" />
+		<Unit filename="MenuPrincipal.h" />
+		<Unit filename="MenuReportes.cpp" />
+		<Unit filename="MenuReportes.h" />
+		<Unit filename="MenuTurno.cpp" />
+		<Unit filename="MenuTurno.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menuPrincipal.cpp" />
-		<Unit filename="menuPrincipal.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
