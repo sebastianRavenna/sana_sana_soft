@@ -1,11 +1,11 @@
 #pragma once
 #include "Persona.h"
 
-class Paciente:Persona
+class Paciente: public Persona
 {
     public:
         Paciente();
-        virtual ~Paciente();
+        //virtual ~Paciente();
         int getIdPaciente();
         int getIdObraSocial();
         void setIdPaciente(int idPaciente);

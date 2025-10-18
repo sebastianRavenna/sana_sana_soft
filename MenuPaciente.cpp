@@ -1,6 +1,8 @@
 #include<iostream>
 #include "rlutil.h"
 #include "menuPrincipal.h"
+#include "Persona.h"
+#include "Paciente.h"
 using namespace std;
 
 
@@ -42,11 +44,12 @@ do{
         cin>> numeroInicio;
     }
 
+    Paciente paciente;
 
     switch(numeroInicio){
         case 1:
             rlutil::cls();
-            cout<<"ALTA PACIENTE";
+            paciente.cargar();
         break;
 
         case 2:

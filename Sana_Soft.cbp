@@ -38,6 +38,8 @@
 		<Unit filename="ArchivoPersona.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Medico.cpp" />
+		<Unit filename="Medico.h" />
 		<Unit filename="MenuFacturacion.cpp" />
 		<Unit filename="MenuFacturacion.h" />
 		<Unit filename="MenuListados.cpp" />

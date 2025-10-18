@@ -1,7 +1,11 @@
 #include "Paciente.h"
 
-Paciente::Paciente()
-:_idPaciente("0"), _idObraSocial("0"){}
+Paciente::Paciente() : Persona(){
+_idPaciente=0;
+_idObraSocial=0;
+}
+
+
 
 
 int Paciente::getIdPaciente(){
@@ -21,10 +25,10 @@ _idObraSocial=idObraSocial;
 }
 
 void Paciente::cargar(){
-Persona::cargar();
+    Persona::cargar();
 
 }
 
 void Paciente::mostrar(){
-Persona::mostrar();
+    Persona::mostrar();
 }
