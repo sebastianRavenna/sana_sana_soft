@@ -105,3 +105,106 @@
 
 1760792762 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuturno.h
 
+1760709168 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\main.cpp
+	<iostream>
+	"menuPrincipal.h"
+
+1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.h
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"MenuPrincipal.h"
+	"MenuFacturacion.h"
+	"MenuListados.h"
+	"MenuMedico.h"
+	"MenuObraSocial.h"
+	"MenuPaciente.h"
+	"MenuReportes.h"
+	"MenuTurno.h"
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.h
+
+1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.h
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1759412464 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.cpp
+	"Fecha.h"
+
+1760800693 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.h
+	<string>
+
+1760798393 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.cpp
+	"ArchivoPersona.h"
+
+1760798357 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.h
+	<string>
+	"Persona.h"
+
+1760798918 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.h
+	<string>
+	"Fecha.h"
+
+1760798694 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
+	<iostream>
+	<cstring>
+	"Persona.h"
+
