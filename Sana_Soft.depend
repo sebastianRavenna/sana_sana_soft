@@ -11,10 +11,17 @@
 
 1760708583 c:\users\tim\documents\github\sana_sana_soft\menuprincipal.h
 
-1760709146 source:c:\users\tim\documents\github\sana_sana_soft\menuprincipal.cpp
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menuprincipal.cpp
 	<iostream>
 	"rlutil.h"
-	"menuPrincipal.h"
+	"MenuPrincipal.h"
+	"MenuFacturacion.h"
+	"MenuListados.h"
+	"MenuMedico.h"
+	"MenuObraSocial.h"
+	"MenuPaciente.h"
+	"MenuReportes.h"
+	"MenuTurno.h"
 
 1760704682 c:\users\tim\documents\github\sana_sana_soft\rlutil.h
 	<iostream>
@@ -206,5 +213,83 @@
 1760798694 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
 	<iostream>
 	<cstring>
+	"Persona.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\archivopersona.cpp
+	"ArchivoPersona.h"
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\archivopersona.h
+	<string>
+	"Persona.h"
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\persona.h
+	<string>
+	"Fecha.h"
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\fecha.h
+	<string>
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menufacturacion.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menulistados.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menumedico.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menuobrasocial.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menupaciente.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menufacturacion.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menulistados.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menumedico.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menuobrasocial.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menupaciente.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menureportes.h
+
+1760812663 c:\users\tim\documents\github\sana_sana_soft\menuturno.h
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menureportes.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\menuturno.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1760812663 source:c:\users\tim\documents\github\sana_sana_soft\persona.cpp
+	<iostream>
+	<cstring>
+	"Persona.h"
+
+1760838861 source:c:\users\tim\documents\github\sana_sana_soft\paciente.cpp
+	"Paciente.h"
+
+1760818347 c:\users\tim\documents\github\sana_sana_soft\paciente.h
 	"Persona.h"
 

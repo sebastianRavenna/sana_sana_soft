@@ -1,7 +1,7 @@
 #include "Paciente.h"
 
-Paciente::Paciente()
-:_idPaciente("0"), _idObraSocial("0"){}
+/*Paciente::Paciente()
+:_idPaciente("0"), _idObraSocial("0"){}*/
 
 
 int Paciente::getIdPaciente(){
