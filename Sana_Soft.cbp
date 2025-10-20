@@ -58,6 +58,10 @@
 		<Unit filename="MenuReportes.h" />
 		<Unit filename="MenuTurno.cpp" />
 		<Unit filename="MenuTurno.h" />
+		<Unit filename="ObraSocial.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="ObraSocial.h" />
 		<Unit filename="Paciente.cpp" />
 		<Unit filename="Paciente.h" />
 		<Unit filename="Persona.cpp" />

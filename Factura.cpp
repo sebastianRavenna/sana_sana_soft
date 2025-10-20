@@ -129,3 +129,9 @@ void Factura::cargar(){
     cin>>est;
     setEstado(est);
 }
+
+/*bool Factura::leer(){
+}
+bool Factura::escribir(){
+}*/
+
