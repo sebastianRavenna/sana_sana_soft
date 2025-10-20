@@ -36,6 +36,8 @@
 		</Compiler>
 		<Unit filename="ArchivoPersona.cpp" />
 		<Unit filename="ArchivoPersona.h" />
+		<Unit filename="Factura.cpp" />
+		<Unit filename="Factura.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Medico.cpp" />
