@@ -42,6 +42,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="Funciones.cpp" />
 		<Unit filename="Funciones.h" />
+		<Unit filename="Hora.cpp" />
+		<Unit filename="Hora.h" />
 		<Unit filename="Medico.cpp" />
 		<Unit filename="Medico.h" />
 		<Unit filename="MenuFacturacion.cpp" />

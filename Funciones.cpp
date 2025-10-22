@@ -1,6 +1,7 @@
 #include<string>
 #include<iostream>
 #include"Funciones.h"
+#include<ctime>
 using namespace std;
 
 std::string cargarCadena(){
@@ -15,3 +16,5 @@ std::getline(std::cin,texto);
 return texto;
 
 }
+
+

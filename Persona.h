@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Fecha.h"
+#include "Hora.h"
 
 class Persona
 {
@@ -22,6 +23,7 @@ class Persona
         std::string getNombreCompleto()const;
         Fecha getFechaNac();
         Fecha getFechaIngreso();
+        Hora getHoraIngreso();
         bool getEstado();
         int getEdad();
         int getAntiguedad();
@@ -32,8 +34,9 @@ class Persona
         void setMail(const std::string &mail);
         void setTelefono(const std::string &telefono);
         void setSexo(const std::string &sexo);
-        void setFechaNac (Fecha);
+        void setFechaNac(Fecha);
         void setFechaIngreso(Fecha);
+        void setHoraIngreso(Hora);
         void setEstado(bool);
 
 
@@ -43,6 +46,7 @@ class Persona
        int _idPersona;
        char _DNI [10], _nombre[20], _apellido[20], _domicilio[30], _mail[30], _telefono[14], _sexo[2];
        Fecha fechaNac, fechaIngreso;
+       Hora horaIngreso;
        bool _estado;
 };
 

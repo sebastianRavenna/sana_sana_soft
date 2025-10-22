@@ -80,7 +80,7 @@
 	"menuPrincipal.h"
 	"Medico.h"
 
-1761053488 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.cpp
+1761054152 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
@@ -227,22 +227,24 @@
 	<string>
 	"Persona.h"
 
-1760821648 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.h
+1761170555 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.h
 	<string>
 	"Fecha.h"
+	"Hora.h"
 
-1760821647 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.h
+1761169654 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.h
 	<string>
 
-1760821647 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.cpp
+1761169765 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.cpp
 	<iostream>
 	"Fecha.h"
 
-1761053957 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.cpp
+1761137278 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"Persona.h"
+	"Funciones.h"
 
 1761047654 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.cpp
 	"Paciente.h"
@@ -371,9 +373,26 @@
 	<cstring>
 	<string>
 
-1761054126 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\obrasocial.cpp
-	"ObraSocial.h"
+1761137278 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\obrasocial.cpp
 	<cstring>
 	<string>
 	<iostream>
+	"ObraSocial.h"
+	"Funciones.h"
+
+1761169627 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\funciones.cpp
+	<string>
+	<iostream>
+	"Funciones.h"
+	<ctime>
+
+1761136879 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\funciones.h
+
+1761170449 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\hora.cpp
+	<iostream>
+	<string>
+	"Hora.h"
+
+1761137801 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\hora.h
+	<string>
 

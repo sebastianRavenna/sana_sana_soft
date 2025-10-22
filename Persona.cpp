@@ -17,6 +17,7 @@ Persona::Persona()
     strcpy(_sexo, "N");
     fechaNac = Fecha();
     fechaIngreso = Fecha();
+    horaIngreso = Hora();
     _estado = true;
 }
 
@@ -63,6 +64,10 @@ cout << endl;
 
 cout << "Fecha de Ingreso: " << endl;
 fechaIngreso.Cargar();
+cout << endl;
+
+cout << "Hora de Ingreso: " << endl;
+horaIngreso.Cargar();
 cout << endl;
 
 _estado=true;
@@ -172,6 +177,9 @@ void Persona::setFechaNac (Fecha f){
 }
 void Persona::setFechaIngreso(Fecha f){
     fechaIngreso=f;
+}
+void Persona::setHoraIngreso(Hora h){
+    horaIngreso=h;
 }
 void Persona::setEstado(bool estado){
     _estado=estado;
