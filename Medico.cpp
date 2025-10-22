@@ -8,11 +8,11 @@ Medico::Medico() : Persona(){
 }
 
 int Medico::getIdMedico(){
-return _idMedico;
+    return _idMedico;
 }
 
 int Medico::getIdObraSocial(){
-return _idObraSocial;
+    return _idObraSocial;
 }
 
 int Medico::getCodEspecialidad(){
@@ -24,19 +24,19 @@ int Medico::getMatricula(){
 }
 
 void Medico::setIdMedico(int idMedico){
-_idMedico=idMedico;
+    _idMedico=idMedico;
 }
 
 void Medico::setIdObraSocial(int idObraSocial){
-_idObraSocial=idObraSocial;
+    _idObraSocial=idObraSocial;
 }
 
 void Medico::setCodEspecialidad(int codEspecialidad){
-_codEspecialidad=codEspecialidad;
+    _codEspecialidad=codEspecialidad;
 }
 
 void Medico::setMatricula(int matricula){
-_matricula=matricula;
+    _matricula=matricula;
 }
 
 void Medico::cargar(){

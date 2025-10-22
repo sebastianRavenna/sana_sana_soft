@@ -1,6 +1,7 @@
 #include<iostream>
 #include "rlutil.h"
 #include "menuPrincipal.h"
+#include "Factura.h"
 using namespace std;
 
 
@@ -38,11 +39,12 @@ do{
         cin>> numeroInicio;
     }
 
-
+    Factura factura;
     switch(numeroInicio){
         case 1:
             rlutil::cls();
-            cout<<"CREAR FACTURA";
+            factura.cargar();
+            factura.mostrar();
         break;
 
         case 2:

@@ -1,6 +1,6 @@
 #pragma once
 #include <cstring>
-
+#include <string>
 class ObraSocial{
     private:
         int _idObraSocial;

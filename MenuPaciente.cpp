@@ -50,6 +50,7 @@ do{
         case 1:
             rlutil::cls();
             paciente.cargar();
+            paciente.mostrar();
         break;
 
         case 2:

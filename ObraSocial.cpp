@@ -1,20 +1,10 @@
-#include "ObraSocial.h"
 #include <cstring>
+#include <string>
 #include <iostream>
+#include "ObraSocial.h"
+#include "Funciones.h"
 
 using namespace std;
-
-std::string cargarCadena(){
-std::string texto;
-
-if (std::cin.peek()== '\n'){
-    std::cin.ignore();
-}
-
-std::getline(std::cin,texto);
-
-return texto;
-}
 
 ObraSocial::ObraSocial(){
         _idObraSocial = 0;
