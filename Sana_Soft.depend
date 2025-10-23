@@ -123,10 +123,11 @@
 
 1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.h
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.cpp
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
+	"Factura.h"
 
 1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\rlutil.h
 	<iostream>
@@ -147,20 +148,24 @@
 	"rlutil.h"
 	"menuPrincipal.h"
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.cpp
+1760968906 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
+	"Medico.h"
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.cpp
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
+	"ObraSocial.h"
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.cpp
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
+	"Persona.h"
+	"Paciente.h"
 
 1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.cpp
 	<iostream>
@@ -198,10 +203,11 @@
 	"rlutil.h"
 	"menuPrincipal.h"
 
-1759412464 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.cpp
+1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.cpp
+	<iostream>
 	"Fecha.h"
 
-1760800693 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.h
+1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.h
 	<string>
 
 1760798393 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.cpp
@@ -211,14 +217,17 @@
 	<string>
 	"Persona.h"
 
-1760798918 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.h
+1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.h
 	<string>
 	"Fecha.h"
+	"Hora.h"
 
-1760798694 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
+1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
 	<iostream>
 	<cstring>
+	<string>
 	"Persona.h"
+	"Funciones.h"
 
 1760821647 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.cpp
 	"ArchivoPersona.h"
@@ -275,7 +284,7 @@
 1761170682 c:\users\tim\documents\github\sana_sana_soft\fecha.h
 	<string>
 
-1761226394 source:c:\users\tim\documents\github\sana_sana_soft\factura.cpp
+1761170682 source:c:\users\tim\documents\github\sana_sana_soft\factura.cpp
 	<iostream>
 	<cstring>
 	"Factura.h"
@@ -448,4 +457,55 @@
 	<iostream>
 	"ObraSocial.h"
 	"Funciones.h"
+
+1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.h
+	<string>
+
+1760968906 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.cpp
+	<iostream>
+	<cstring>
+	"Factura.h"
+	"Fecha.h"
+
+1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.h
+	<cstring>
+	"Fecha.h"
+
+1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.cpp
+	<string>
+	<iostream>
+	"Funciones.h"
+	<ctime>
+
+1761151283 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.h
+
+1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.cpp
+	<iostream>
+	<string>
+	"Hora.h"
+
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+
+1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.h
+	"Persona.h"
+
+1761151283 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.h
+	<cstring>
+	<string>
+
+1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.h
+	"Persona.h"
+
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.cpp
+	<cstring>
+	<string>
+	<iostream>
+	"ObraSocial.h"
+	"Funciones.h"
+
+1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.cpp
+	"Paciente.h"
 
