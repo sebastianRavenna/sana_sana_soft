@@ -54,6 +54,7 @@
 		<Unit filename="Medico.h" />
 		<Unit filename="MenuFacturacion.cpp" />
 		<Unit filename="MenuFacturacion.h" />
+		<Unit filename="MenuHistoriaClinica.cpp" />
 		<Unit filename="MenuListados.cpp" />
 		<Unit filename="MenuListados.h" />
 		<Unit filename="MenuMedico.cpp" />
@@ -75,6 +76,7 @@
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuHistoriaClinica.h" />
 		<Unit filename="rlutil.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -284,7 +284,7 @@
 1761170682 c:\users\tim\documents\github\sana_sana_soft\fecha.h
 	<string>
 
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\factura.cpp
+1761226394 source:c:\users\tim\documents\github\sana_sana_soft\factura.cpp
 	<iostream>
 	<cstring>
 	"Factura.h"
@@ -329,12 +329,14 @@
 	"menuPrincipal.h"
 	"ObraSocial.h"
 
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menupaciente.cpp
+1761230145 source:c:\users\tim\documents\github\sana_sana_soft\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 	"Persona.h"
 	"Paciente.h"
+	"HistoriaClinica.h"
+	"menuHistoriaClinica.h"
 
 1761170682 c:\users\tim\documents\github\sana_sana_soft\paciente.h
 	"Persona.h"
@@ -508,4 +510,39 @@
 
 1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.cpp
 	"Paciente.h"
+
+1761228471 source:c:\users\tim\documents\github\sana_sana_soft\archivoespecialidad.cpp
+	<string>
+	"ArchivoEspecialidad.h"
+
+1761228471 c:\users\tim\documents\github\sana_sana_soft\archivoespecialidad.h
+	<string>
+	"Especialidad.h"
+
+1761228471 c:\users\tim\documents\github\sana_sana_soft\especialidad.h
+
+1761228471 source:c:\users\tim\documents\github\sana_sana_soft\especialidad.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"Funciones.h"
+
+1761228145 source:c:\users\tim\documents\github\sana_sana_soft\historiaclinica.cpp
+	<iostream>
+	<cstring>
+	"HistoriaClinica.h"
+	"Funciones.h"
+
+1761221584 c:\users\tim\documents\github\sana_sana_soft\historiaclinica.h
+	<string>
+	"Fecha.h"
+
+1761230218 source:c:\users\tim\documents\github\sana_sana_soft\menuhistoriaclinica.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+	"menuHistoriaClinica.h"
+	"HistoriaClinica.h"
+
+1761229551 c:\users\tim\documents\github\sana_sana_soft\menuhistoriaclinica.h
 

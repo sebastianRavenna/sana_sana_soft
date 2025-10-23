@@ -1,15 +1,11 @@
-#include<iostream>
+#include <iostream>
 #include "rlutil.h"
 #include "menuPrincipal.h"
-#include "Persona.h"
-#include "Paciente.h"
-#include "HistoriaClinica.h"
 #include "menuHistoriaClinica.h"
+#include "HistoriaClinica.h"
 using namespace std;
 
-
-
-void menuPaciente(){
+void meniHistoriaClinica(){
 
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
@@ -17,22 +13,21 @@ int numeroInicio;
 
 do{
     rlutil::cls();
-    cout <<margenTitulo<< "  ____            _            _            " << endl;
-    cout <<margenTitulo<< " |  _ \\ __ _  ___(_) ___ _ __ | |_ ___  ___ " << endl;
-    cout <<margenTitulo<< " | |_) / _` |/ __| |/ _ \\ '_ \\| __/ _ \\/ __|" << endl;
-    cout <<margenTitulo<< " |  __/ (_| | (__| |  __/ | | | ||  __/\\__ \\" << endl;
-    cout <<margenTitulo<< " |_|   \\__,_|\\___|_|\\___|_| |_|\\__\\___||___/" << endl<<endl<<endl;
+
+    cout <<margenTitulo<< " _   _ _     _             _          ____ _ _       _" << endl;
+    cout <<margenTitulo<< "| | | (_)___| |_ ___  _ __(_) __ _   / ___| (_)_ __ (_) ___ __ _" << endl;
+    cout <<margenTitulo<< "| |_| | / __| __/ _ \\| '__| |/ _` | | |   | | | '_ \\| |/ __/ _` |" << endl;
+    cout <<margenTitulo<< "|  _  | \\__ \\ || (_) | |  | | (_| | | |___| | | | | | | (_| (_| |" << endl;
+    cout <<margenTitulo<< "|_| |_|_|___/\\__\\___/|_|  |_|\\__,_|  \\____|_|_|_| |_|_|\\___\\__,_|" << endl<<endl<<endl;
+
 
     cout<<margenMenu<<" =============================="<<endl;
-    cout<<margenMenu<<"||  1 - ALTA PACIENTE         ||"<<endl;
+    cout<<margenMenu<<"||  1 - CREAR H. CLINICA      ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  2 - BUSCAR PACIENTE       ||"<<endl;
+    cout<<margenMenu<<"||  2 - BUSCAR H. CLINICA     ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  3 - MODIFICAR PACIENTE    ||"<<endl;
+    cout<<margenMenu<<"||  3 - MODIFICAR H. CLINICA  ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  4 - BAJA PACIENTE         ||"<<endl;
-    cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  5 - HISTORIA CLINICA      ||"<<endl;
     cout<<margenMenu<<"||============================||"<<endl;
     cout<<margenMenu<<"||  0 - VOLVER AL M. INICIAL  ||"<<endl;
     cout<<margenMenu<<" =============================="<<endl<<endl;
@@ -40,39 +35,34 @@ do{
     cout<<margenMenu<<"Ingrese la opcion deseada: ";
     cin>> numeroInicio;
 
-    while(numeroInicio>5||numeroInicio<0){
+    while(numeroInicio>3||numeroInicio<0){
         cout<<margenMenu<<"Numero incorrecto"<<endl;
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
     }
-
-    Paciente paciente;
+    HistoriaClinica historia;
 
     switch(numeroInicio){
         case 1:
             rlutil::cls();
-            paciente.cargar();
-            paciente.mostrar();
+            historia.cargar();
+            historia.mostrar(); //prueba!!
+
         break;
 
         case 2:
             rlutil::cls();
-            cout<<"BUSCAR PACIENTE";
+            cout<<"BUSCAR H. CLINICA";
         break;
 
         case 3:
             rlutil::cls();
-            cout<<"MODIFICAR PACIENTE";
+            cout<<"MODIFICAR H. CLINICA";
         break;
 
         case 4:
             rlutil::cls();
-            cout<<"BAJA PACIENTE";
-        break;
-
-        case 5:
-            rlutil::cls();
-            meniHistoriaClinica();
+            cout<<"BAJA H. CLINICA";
         break;
 
         case 0:
