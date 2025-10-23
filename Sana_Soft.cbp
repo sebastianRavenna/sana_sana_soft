@@ -34,8 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoEspecialidad.cpp" />
+		<Unit filename="ArchivoEspecialidad.h" />
 		<Unit filename="ArchivoPersona.cpp" />
 		<Unit filename="ArchivoPersona.h" />
+		<Unit filename="Especialidad.cpp" />
+		<Unit filename="Especialidad.h" />
 		<Unit filename="Factura.cpp" />
 		<Unit filename="Factura.h" />
 		<Unit filename="Fecha.cpp" />
