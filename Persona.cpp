@@ -1,21 +1,10 @@
 #include <iostream>
 #include <cstring>
+#include <string>
 #include "Persona.h"
-
+#include "Funciones.h"
 using namespace std;
 
-std::string cargarCadena(){
-std::string texto;
-
-if (std::cin.peek()== '\n'){
-    std::cin.ignore();
-}
-
-std::getline(std::cin,texto);
-
-return texto;
-
-}
 Persona::Persona()
 {
     _idPersona = 0;
@@ -28,6 +17,7 @@ Persona::Persona()
     strcpy(_sexo, "N");
     fechaNac = Fecha();
     fechaIngreso = Fecha();
+    horaIngreso = Hora();
     _estado = true;
 }
 
@@ -74,6 +64,10 @@ cout << endl;
 
 cout << "Fecha de Ingreso: " << endl;
 fechaIngreso.Cargar();
+cout << endl;
+
+cout << "Hora de Ingreso: " << endl;
+horaIngreso.Cargar();
 cout << endl;
 
 _estado=true;
@@ -183,6 +177,9 @@ void Persona::setFechaNac (Fecha f){
 }
 void Persona::setFechaIngreso(Fecha f){
     fechaIngreso=f;
+}
+void Persona::setHoraIngreso(Hora h){
+    horaIngreso=h;
 }
 void Persona::setEstado(bool estado){
     _estado=estado;

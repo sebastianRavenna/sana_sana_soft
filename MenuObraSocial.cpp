@@ -1,6 +1,7 @@
 #include<iostream>
 #include "rlutil.h"
 #include "menuPrincipal.h"
+#include "ObraSocial.h"
 using namespace std;
 
 
@@ -10,6 +11,7 @@ void menuObraSocial(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
+
 
 do{
     rlutil::cls();
@@ -39,11 +41,12 @@ do{
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
     }
-
+    ObraSocial obrasocial;
     switch(numeroInicio){
         case 1:
             rlutil::cls();
-            cout<<"ALTA O. SOCIAL";
+            obrasocial.cargar();
+            obrasocial.mostrar();
         break;
 
         case 2:

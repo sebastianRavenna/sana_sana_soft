@@ -9,19 +9,19 @@ _idObraSocial=0;
 
 
 int Paciente::getIdPaciente(){
-return _idPaciente;
+    return _idPaciente;
 }
 
 int Paciente::getIdObraSocial(){
-return _idObraSocial;
+    return _idObraSocial;
 }
 
 void Paciente::setIdPaciente(int idPaciente){
-_idPaciente=idPaciente;
+    _idPaciente=idPaciente;
 }
 
 void Paciente::setIdObraSocial(int idObraSocial){
-_idObraSocial=idObraSocial;
+    _idObraSocial=idObraSocial;
 }
 
 void Paciente::cargar(){
