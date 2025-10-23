@@ -3,6 +3,7 @@
 #include "menuPrincipal.h"
 #include "Persona.h"
 #include "Paciente.h"
+#include "HistoriaClinica.h"
 using namespace std;
 
 

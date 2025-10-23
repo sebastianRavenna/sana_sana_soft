@@ -42,6 +42,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="Funciones.cpp" />
 		<Unit filename="Funciones.h" />
+		<Unit filename="HistoriaClinica.cpp" />
+		<Unit filename="HistoriaClinica.h" />
 		<Unit filename="Hora.cpp" />
 		<Unit filename="Hora.h" />
 		<Unit filename="Medico.cpp" />

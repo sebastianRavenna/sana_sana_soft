@@ -103,29 +103,42 @@ void Factura::cargar(){
     bool est;
     Fecha fechaAux;
 
-    cout<<"ID Factura: "<<endl; // Ver como hacer para que aumente de forma automatica
+    cout<<"ID Factura: "; // Ver como hacer para que aumente de forma automatica
     cin>>idFact;
     setIdFactura(idFact);
-    cout<<"Tipo de Factura: "<<endl;
+    cout << endl;
+
+    cout<<"Tipo de Factura: ";
     cin>>tipoFac;
     setTipoFactura(tipoFac);
-    cout<<"Fecha: "<<endl;
+    cout << endl;
+
+    cout<<"Fecha: ";
     fechaAux.Cargar();
     setFechaFactura(fechaAux);
     cout<<endl;
-    cout<<"DNI Paciente: "<<endl;
+
+    cout<<"DNI Paciente: ";
     cin>>dniPac;
     setDniPaciente(dniPac);
-    cout<<"ID Medico: "<<endl;
+    cout << endl;
+
+    cout<<"ID Medico: ";
     cin>>idMed;
     setIdMedico(idMed);
-    cout<<"Codigo de Especialidad: "<<endl;
+    cout << endl;
+
+    cout<<"Codigo de Especialidad: ";
     cin>>codEsp;
     setCodEspecialidad(codEsp);
-    cout<<"Importe: "<<endl;
+    cout << endl;
+
+    cout<<"Importe: ";
     cin>>imp;
     setImporte(imp);
-    cout<<"Estado: "<<endl;
+    cout << endl;
+
+    cout<<"Estado: ";
     cin>>est;
     setEstado(est);
 }
