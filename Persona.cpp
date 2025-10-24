@@ -88,18 +88,14 @@ void Persona::mostrar() {
 
     cout << "Fecha de nacimiento: ";
     fechaNac.Mostrar();
+    cout << "Edad: "<<getEdad()<<endl;
     cout << "Fecha de ingreso: ";
     fechaIngreso.Mostrar();
+    getAntiguedad();
 
     cout << "Estado: " << (_estado ? "Activo" : "Inactivo") << endl;
 }
 
-/*
-bool Persona::escribir(){
-}
-bool Persona::leer(){
-}
-*/
 int Persona::getIdPersona(){
  return _idPersona;
 }
@@ -138,11 +134,24 @@ Fecha Persona::getFechaIngreso(){
 bool Persona::getEstado(){
     return _estado;
 }
-/*
+
 int Persona::getEdad(){
-    return _edad;
+    int edad;
+    Fecha hoy;
+    hoy.fechaActual();
+    edad = hoy.calcularEdad(fechaNac);
+    return edad;
 }
-*/
+
+void Persona::getAntiguedad(){
+    Fecha hoy;
+    hoy.fechaActual();
+    int anios, meses;
+    anios = hoy.calcularAntiguedad(fechaIngreso)/12;
+    meses = hoy.calcularAntiguedad(fechaIngreso)%12;
+    cout<<"Antiguedad: "<<anios<<" Anios y "<<meses<<" Meses."<<endl;
+}
+
 
 void Persona::setDNI(const string &dni){
 strncpy(_DNI, dni.c_str(), sizeof(_DNI) - 1);

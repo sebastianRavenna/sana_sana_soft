@@ -17,6 +17,9 @@ class Fecha{
     void setDia(int dia);
     void setMes(int mes);
     void setAnio(int anio);
+    void fechaActual();
+    int calcularEdad(Fecha fechaNac);
+    int calcularAntiguedad(Fecha fechaAlta);
     bool esBisiesto(int anio);
     int diasEnMes(int mes, int anio);
 

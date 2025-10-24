@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 #include "Fecha.h"
 using namespace std;
 Fecha::Fecha(){
@@ -54,6 +55,31 @@ void Fecha::Cargar(){
         }
         if(!fechaValida) cout<<"Intente nuevamente: "<<endl;
     }
+}
+
+void Fecha::fechaActual(){
+    int diaActual, mesActual, anioActual;
+    time_t ahora=time(0);
+	tm* hoy = localtime(&ahora);
+
+	_dia = hoy->tm_mday;
+	_mes = hoy->tm_mon+1;
+	_anio = hoy->tm_year+1900;
+}
+int Fecha::calcularEdad(Fecha fechaNac){
+    int edad;
+
+    edad = _anio - fechaNac.getAnio();
+    if (_mes < fechaNac.getMes()||(_mes == fechaNac.getMes() && _dia < fechaNac.getDia())) {
+        edad--;
+    }
+
+    return edad;
+}
+int Fecha::calcularAntiguedad(Fecha fechaAlta){
+    int meses = (_anio - fechaAlta.getAnio())*12;
+    meses += (_mes - fechaAlta.getMes());
+    return meses;
 }
 
 int Fecha::getDia(){

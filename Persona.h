@@ -26,7 +26,7 @@ class Persona
         Hora getHoraIngreso();
         bool getEstado();
         int getEdad();
-        int getAntiguedad();
+        void getAntiguedad();
         void setDNI(const std::string &dni);
         void setNombre(const std::string &nombre);
         void setApellido(const std::string &apellido);
@@ -43,7 +43,7 @@ class Persona
     protected:
 
     private:
-       int _idPersona;
+       int _idPersona, _edad;
        char _DNI [10], _nombre[20], _apellido[20], _domicilio[30], _mail[30], _telefono[14], _sexo[2];
        Fecha fechaNac, fechaIngreso;
        Hora horaIngreso;
