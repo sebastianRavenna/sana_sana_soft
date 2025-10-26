@@ -6,7 +6,7 @@ ArchivoPersona::ArchivoPersona(const std::string &nombreArchivo)
 :_nombreArchivo(nombreArchivo){}
 
 
-bool ArchivoPersona::escribir (const Persona &p){
+bool ArchivoPersona::agregarRegistro (const Persona &p){
 FILE *archivo;
 archivo=fopen(_nombreArchivo.c_str(),"ab");
 

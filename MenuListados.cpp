@@ -1,6 +1,6 @@
 #include<iostream>
 #include "rlutil.h"
-#include "menuPrincipal.h"
+#include "ArchivoPaciente.h"
 using namespace std;
 
 
@@ -10,9 +10,12 @@ void menuListado(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
+ArchivoPaciente pacientes;
+
 
 do{
-    rlutil::cls();
+    system("cls");//tuve que usar este porque el rlutil no limpiaba toda la pantalla quedaba residuos del ALTA
+    //rlutil::cls();
     cout <<margenTitulo<< "  _     _     _            _           " << endl;
     cout <<margenTitulo<< " | |   (_)___| |_ __ _  __| | ___  ___ " << endl;
     cout <<margenTitulo<< " | |   | / __| __/ _` |/ _` |/ _ \\/ __|" << endl;
@@ -43,7 +46,7 @@ do{
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
     }
-
+    cin.ignore(1000, '\n');
 
     switch(numeroInicio){
         case 1:
@@ -53,7 +56,8 @@ do{
 
         case 2:
             rlutil::cls();
-            cout<<"LISTAR PACIENTES";
+            cout << "\n=== LISTANDO PACIENTES DEL ARCHIVO ===" << endl<< endl;
+            pacientes.listarPacientes();
         break;
 
         case 3:

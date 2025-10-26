@@ -5,7 +5,7 @@
 #include "HistoriaClinica.h"
 using namespace std;
 
-void meniHistoriaClinica(){
+void menuHistoriaClinica(){
 
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};

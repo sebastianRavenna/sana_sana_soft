@@ -8,19 +8,18 @@ tamanioRegistro=sizeof(Especialidad);
 }
 
 bool ArchivoEspecialidad::agregarRegistro(const Especialidad &reg )
-{
+    {
+    FILE *pEspecialidad;
+    pEspecialidad=fopen(_nombreArchivo.c_str(),"ab");
 
-FILE *pEspecialidad;
-pEspecialidad=fopen(_nombreArchivo.c_str(),"ab");
+    if (pEspecialidad==NULL)return false;
 
-if (pEspecialidad==NULL)return false;
+    fwrite(&reg,tamanioRegistro,1,pEspecialidad);
+    fclose(pEspecialidad);
 
-fwrite(&reg,tamanioRegistro,1,pEspecialidad);
-fclose(pEspecialidad);
-
-return true;
-
+    return true;
 }
+
 bool ArchivoEspecialidad::leerRegistro(int posicion,Especialidad &reg){
 
 FILE *pEspecialidad;

@@ -8,7 +8,7 @@ class ArchivoPersona
 {
     public:
         ArchivoPersona(const std::string &nombreArchivo="personas.dat");
-        bool escribir (const Persona &p);
+        bool agregarRegistro (const Persona &p);
         bool leer (int posicion,Persona &p);
 
 

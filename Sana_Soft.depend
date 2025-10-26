@@ -69,10 +69,10 @@
 	"menuPrincipal.h"
 	"Factura.h"
 
-1760795282 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
+1761439648 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
 	<iostream>
 	"rlutil.h"
-	"menuPrincipal.h"
+	"ArchivoPaciente.h"
 
 1760825995 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menumedico.cpp
 	<iostream>
@@ -86,13 +86,11 @@
 	"menuPrincipal.h"
 	"ObraSocial.h"
 
-1761245420 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
+1761440891 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
-	"menuPrincipal.h"
-	"Persona.h"
 	"Paciente.h"
-	"HistoriaClinica.h"
+	"ArchivoPaciente.h"
 	"menuHistoriaClinica.h"
 
 1760795282 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.cpp
@@ -231,14 +229,14 @@
 	"Persona.h"
 	"Funciones.h"
 
-1760821647 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.cpp
+1761332684 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.cpp
 	"ArchivoPersona.h"
 
-1760821647 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.h
+1761333129 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.h
 	<string>
 	"Persona.h"
 
-1761264570 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.h
+1761434055 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.h
 	<string>
 	"Fecha.h"
 	"Hora.h"
@@ -251,17 +249,22 @@
 	<ctime>
 	"Fecha.h"
 
-1761263392 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.cpp
+1761440111 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"Persona.h"
 	"Funciones.h"
 
-1761047654 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.cpp
+1761438298 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.cpp
+	<iostream>
+	<string>
+	<cstring>
 	"Paciente.h"
+	"Funciones.h"
 
-1760823591 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.h
+1761434790 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.h
+	<string>
 	"Persona.h"
 
 1761047654 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\medico.cpp
@@ -545,7 +548,7 @@
 
 1761229551 c:\users\tim\documents\github\sana_sana_soft\menuhistoriaclinica.h
 
-1761228455 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivoespecialidad.cpp
+1761402871 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivoespecialidad.cpp
 	<string>
 	"ArchivoEspecialidad.h"
 
@@ -571,12 +574,24 @@
 	<string>
 	"Fecha.h"
 
-1761245420 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.cpp
+1761403638 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 	"menuHistoriaClinica.h"
 	"HistoriaClinica.h"
 
-1761245420 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.h
+1761403638 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.h
+
+1761437314 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ArchivoPaciente.h"
+	"Paciente.h"
+	<cstdio>
+
+1761404891 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.h
+	<string>
+	"Paciente.h"
 

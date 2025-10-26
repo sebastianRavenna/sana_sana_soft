@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Persona.h"
 
 class Paciente: public Persona
@@ -6,9 +7,9 @@ class Paciente: public Persona
     public:
         Paciente();
         //virtual ~Paciente();
-        int getIdPaciente();
+        std::string getIdPaciente()const;
         int getIdObraSocial();
-        void setIdPaciente(int idPaciente);
+        void setIdPaciente(const std::string &idPaciente);
         void setIdObraSocial(int idObraSocial);
         void cargar();
         void mostrar();
@@ -18,6 +19,7 @@ class Paciente: public Persona
     protected:
 
     private:
-        int _idPaciente, _idObraSocial;
+        int _idObraSocial;
+        char _idPaciente[15];
 };
 

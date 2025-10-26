@@ -7,7 +7,7 @@ using namespace std;
 
 Persona::Persona()
 {
-    _idPersona = 0;
+    strcpy(_idPersona, "00000000");
     strcpy(_DNI, "00000000");
     strcpy(_nombre, "SinNombre");
     strcpy(_apellido, "SinApellido");
@@ -17,19 +17,19 @@ Persona::Persona()
     strcpy(_sexo, "N");
     fechaNac = Fecha();
     fechaIngreso = Fecha();
-    horaIngreso = Hora();
     _estado = true;
 }
 
 
 void Persona::cargar(){
-cout << "ID de persona: " << endl;
+/*cout << "ID de persona: " << endl;
 cin >> _idPersona;
 cin.ignore();
 cout << endl;
-
+*/
 cout << "DNI: " << endl;
 setDNI(cargarCadena());
+setIdPersona(getDNI());
 cout << endl;
 
 cout << "Nombre: " << endl;
@@ -66,12 +66,9 @@ cout << "Fecha de Ingreso: " << endl;
 fechaIngreso.Cargar();
 cout << endl;
 
-cout << "Hora de Ingreso: " << endl;
-horaIngreso.Cargar();
-cout << endl;
-
 _estado=true;
 
+cout.flush();
 }
 
 
@@ -85,7 +82,6 @@ void Persona::mostrar() {
     cout << "Mail: " << getMail() << endl;
     cout << "Telefono: " << getTelefono() << endl;
     cout << "Sexo: " << getSexo() << endl;
-
     cout << "Fecha de nacimiento: ";
     fechaNac.Mostrar();
     cout << "Edad: "<<getEdad()<<endl;
@@ -96,14 +92,14 @@ void Persona::mostrar() {
     cout << "Estado: " << (_estado ? "Activo" : "Inactivo") << endl;
 }
 
-int Persona::getIdPersona(){
- return _idPersona;
+string Persona::getIdPersona()const{
+    return _idPersona;
 }
 string Persona::getDNI()const{
-    return string (_DNI);
+    return _DNI;
 }
 string Persona::getNombre()const{
-    return string (_nombre);
+    return string (_nombre);//por qu‚ ponemos string y parentesis?
 }
 string Persona::getApellido()const{
     return string (_apellido);
@@ -157,6 +153,12 @@ void Persona::setDNI(const string &dni){
 strncpy(_DNI, dni.c_str(), sizeof(_DNI) - 1);
 _DNI[sizeof(_DNI) - 1] = '\0';
 }
+
+void Persona::setIdPersona(const string &idPersona){
+strncpy(_idPersona, idPersona.c_str(), sizeof(_idPersona) - 1);
+_idPersona[sizeof(_idPersona) - 1] = '\0';
+}
+
 void Persona::setNombre(const string &nombre){
     strncpy(_nombre,nombre.c_str(),sizeof(_nombre)-1);
     _nombre[sizeof(_nombre)-1]= '\0';
@@ -187,9 +189,7 @@ void Persona::setFechaNac (Fecha f){
 void Persona::setFechaIngreso(Fecha f){
     fechaIngreso=f;
 }
-void Persona::setHoraIngreso(Hora h){
-    horaIngreso=h;
-}
+
 void Persona::setEstado(bool estado){
     _estado=estado;
 }

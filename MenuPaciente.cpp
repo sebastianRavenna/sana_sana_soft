@@ -1,10 +1,9 @@
 #include<iostream>
 #include "rlutil.h"
-#include "menuPrincipal.h"
-#include "Persona.h"
 #include "Paciente.h"
-#include "HistoriaClinica.h"
+#include "ArchivoPaciente.h"
 #include "menuHistoriaClinica.h"
+
 using namespace std;
 
 
@@ -14,8 +13,11 @@ void menuPaciente(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
+Paciente paciente;
+ArchivoPaciente archivoPaciente;
 
 do{
+    cout<<endl;
     rlutil::cls();
     cout <<margenTitulo<< "  ____            _            _            " << endl;
     cout <<margenTitulo<< " |  _ \\ __ _  ___(_) ___ _ __ | |_ ___  ___ " << endl;
@@ -46,13 +48,17 @@ do{
         cin>> numeroInicio;
     }
 
-    Paciente paciente;
+    cin.ignore(1000, '\n');
 
     switch(numeroInicio){
         case 1:
+            cout<<endl;
             rlutil::cls();
+            cout << "\n=== ALTA DE PACIENTE ===" << endl;
             paciente.cargar();
-            paciente.mostrar();
+            archivoPaciente.guardarPaciente(paciente);
+            cout<<endl;
+            //paciente.mostrar();
         break;
 
         case 2:
@@ -72,7 +78,7 @@ do{
 
         case 5:
             rlutil::cls();
-            meniHistoriaClinica();
+            menuHistoriaClinica();
         break;
 
         case 0:
