@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Agenda.cpp" />
+		<Unit filename="Agenda.h" />
 		<Unit filename="ArchivoEspecialidad.cpp" />
 		<Unit filename="ArchivoEspecialidad.h" />
 		<Unit filename="ArchivoPaciente.cpp" />
@@ -77,6 +79,8 @@
 		<Unit filename="Paciente.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
+		<Unit filename="Turno.cpp" />
+		<Unit filename="Turno.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menuHistoriaClinica.h" />
 		<Unit filename="rlutil.h" />
