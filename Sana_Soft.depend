@@ -69,7 +69,7 @@
 	"menuPrincipal.h"
 	"Factura.h"
 
-1761439648 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
+1761441408 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
 	<iostream>
 	"rlutil.h"
 	"ArchivoPaciente.h"
@@ -86,12 +86,14 @@
 	"menuPrincipal.h"
 	"ObraSocial.h"
 
-1761440891 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
+1761606012 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
+	"string"
 	"Paciente.h"
 	"ArchivoPaciente.h"
 	"menuHistoriaClinica.h"
+	"Funciones.h"
 
 1760795282 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.cpp
 	<iostream>
@@ -263,7 +265,7 @@
 	"Paciente.h"
 	"Funciones.h"
 
-1761434790 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.h
+1761603883 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.h
 	<string>
 	"Persona.h"
 
@@ -583,7 +585,7 @@
 
 1761403638 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.h
 
-1761437314 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.cpp
+1761605968 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -591,7 +593,21 @@
 	"Paciente.h"
 	<cstdio>
 
-1761404891 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.h
+1761605950 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.h
 	<string>
 	"Paciente.h"
+
+1761581110 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\agenda.cpp
+	<iostream>
+	"Agenda.h"
+
+1761581110 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\agenda.h
+	"Fecha.h"
+	"Hora.h"
+
+1761581110 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\turno.cpp
+	<iostream>
+	"Turno.h"
+
+1761581111 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\turno.h
 

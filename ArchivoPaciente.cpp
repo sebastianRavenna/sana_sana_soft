@@ -33,7 +33,7 @@ bool ArchivoPaciente::listarPacientes(){
         cout<<"ERROR EN EL ARCHIVO"<<endl;
         return false;
     }
-    while (fread(&pac, sizeof(Paciente),1, archivo)==1){
+    while (fread(&pac, tamanioRegistro,1, archivo)==1){
         pac.mostrar();
     }
 
@@ -41,30 +41,34 @@ bool ArchivoPaciente::listarPacientes(){
     return true;
 }
 
-
-
-
-
-/*Paciente ArchivoPaciente::buscarPaciente(int pos){
-
+int ArchivoPaciente::buscarPaciente(const std::string& _idPaciente){
+    Paciente pac;
     FILE* archivo=fopen(_nombreArchivo.c_str(), "rb");
         if (archivo==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
-            return nullptr;
+            return -2;
         }
+    int pos=0;
+    while(fread(&pac, tamanioRegistro, 1, archivo)==1){
+        if(pac.getIdPaciente()=="P-"+ _idPaciente){
+            return pos;
+        }
+        pos++;
+    }
+    fclose(archivo);
+    return -1;
+}
 
-    fseek(archivo, 0, SEEK_END);
-
-    long tamanioArchivo=ftell(archivo);
-    tamRegistro = tamanioArchivo/sizeof(Paciente);
-
-    rewind(archivo);//esto lleva al puntero al inicio
-    Paciente *pacientes = new Paciente [tamRegistro];
-
-    fread(pacientes, sizeof(Paciente), tamRegistro, archivo);
+Paciente ArchivoPaciente::leerRegistro(int pos){
+    Paciente pac;
+    FILE* archivo=fopen(_nombreArchivo.c_str(), "rb");
+        if (archivo==NULL){
+            cout<<"ERROR EN EL ARCHIVO"<<endl;
+            return pac;
+    }
+    fseek(archivo, pos*tamanioRegistro,0);
+    fread(&pac, tamanioRegistro, 1, archivo);
 
     fclose(archivo);
-
-    return pacientes;
-}*/
-
+    return pac;
+}

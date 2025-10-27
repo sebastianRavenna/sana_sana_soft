@@ -6,10 +6,11 @@ class ArchivoPaciente
 {
     public:
         ArchivoPaciente(const std::string &nombreArchivo="pacientes.dat");
-        Paciente leerRegistros(int tamRegistro);
+        Paciente leerRegistro(int tamRegistro);
         bool listarPacientes();
         bool guardarPaciente(Paciente pac);
-/*        bool agregarRegistro(const Especialidad &reg);
+        int buscarPaciente(const std::string &_idPaciente);
+/*      bool agregarRegistro(const Especialidad &reg);
         bool leerRegistro(int posicion,Especialidad &reg);
         bool modificarRegistro(Especialidad &reg,int pos);
         int buscarRegistro(int codEspecialidad); ///no se si el parametro esta bien puesto

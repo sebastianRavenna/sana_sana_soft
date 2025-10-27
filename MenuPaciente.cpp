@@ -1,8 +1,10 @@
 #include<iostream>
 #include "rlutil.h"
+#include "string"
 #include "Paciente.h"
 #include "ArchivoPaciente.h"
 #include "menuHistoriaClinica.h"
+#include "Funciones.h"
 
 using namespace std;
 
@@ -12,9 +14,10 @@ void menuPaciente(){
 
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
-int numeroInicio;
+int numeroInicio, posBuscar=0;
 Paciente paciente;
 ArchivoPaciente archivoPaciente;
+std::string idPac;
 
 do{
     cout<<endl;
@@ -48,7 +51,6 @@ do{
         cin>> numeroInicio;
     }
 
-    cin.ignore(1000, '\n');
 
     switch(numeroInicio){
         case 1:
@@ -63,7 +65,16 @@ do{
 
         case 2:
             rlutil::cls();
-            cout<<"BUSCAR PACIENTE";
+
+            cout<<"INGRESE DNI DEL PACIENTE: ";
+            cin>> idPac;
+            archivoPaciente.buscarPaciente(idPac);
+            posBuscar=archivoPaciente.buscarPaciente(idPac);
+            if(posBuscar>=0){
+                paciente=archivoPaciente.leerRegistro(posBuscar);
+                paciente.mostrar();
+            }else cout<<"No existe ese paciente."<<endl;
+            cout<<endl;
         break;
 
         case 3:
