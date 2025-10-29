@@ -38,6 +38,8 @@
 		<Unit filename="Agenda.h" />
 		<Unit filename="ArchivoEspecialidad.cpp" />
 		<Unit filename="ArchivoEspecialidad.h" />
+		<Unit filename="ArchivoMedico.cpp" />
+		<Unit filename="ArchivoMedico.h" />
 		<Unit filename="ArchivoPaciente.cpp" />
 		<Unit filename="ArchivoPaciente.h" />
 		<Unit filename="ArchivoPersona.cpp" />
