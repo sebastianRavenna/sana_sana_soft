@@ -2,6 +2,7 @@
 #include <cstring>
 using namespace std;
 #include "Medico.h"
+#include "Funciones.h"
 
 Medico::Medico() : Persona(){
 
@@ -40,6 +41,11 @@ void Medico::setMatricula(int matricula){
 }
 
 void Medico::cargar(){
+    cout << "DNI: " << endl;
+    setDNI(cargarCadena());
+    setIdPersona(getDNI());
+    cout << endl;
+
     Persona::cargar();
 
     cout << "ID de Medico: " << endl;

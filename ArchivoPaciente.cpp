@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cstring>
 #include "ArchivoPaciente.h"
 #include "Paciente.h"
 

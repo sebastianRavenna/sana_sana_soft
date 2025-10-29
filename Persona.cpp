@@ -26,12 +26,12 @@ void Persona::cargar(){
 cin >> _idPersona;
 cin.ignore();
 cout << endl;
-*/
+
 cout << "DNI: " << endl;
 setDNI(cargarCadena());
 setIdPersona(getDNI());
 cout << endl;
-
+*/
 cout << "Nombre: " << endl;
 setNombre(cargarCadena());
 cout << endl;

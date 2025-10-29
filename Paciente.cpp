@@ -1,11 +1,11 @@
 #include <iostream>
-#include <string>
 #include <cstring>
 #include "Paciente.h"
 #include "Funciones.h"
+#include "ArchivoPaciente.h"
 using namespace std;
 
-//Persona persona;
+ArchivoPaciente arcPac;
 
 Paciente::Paciente() : Persona(){
     strcpy(_idPaciente, "P-00000000");
@@ -30,14 +30,27 @@ void Paciente::setIdPaciente(const string &idPaciente){
 }
 
 void Paciente::cargar(){
+    cout << "DNI: " << endl;
+    setDNI(cargarCadena());
+    setIdPersona(getDNI());
+    cout << endl;
+
+    string idPac = "P-" + getDNI();
+    setIdPaciente(idPac);
+
+    if (arcPac.buscarPaciente(getDNI())>=0){
+        cout<<"Ya existe el usuario."<<endl;
+        //return false;
+    }else{
     Persona::cargar();
+
     cout<<"Obra Social: ";
     cin >> _idObraSocial;
     cin.ignore();
     cout << endl;
-    string idPac = "P-" + getDNI();
-    setIdPaciente(idPac);
-    cout << endl;
+
+    arcPac.guardarPaciente(*this);
+    }
 }
 
 void Paciente::mostrar(){

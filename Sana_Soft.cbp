@@ -58,6 +58,8 @@
 		<Unit filename="Hora.h" />
 		<Unit filename="Medico.cpp" />
 		<Unit filename="Medico.h" />
+		<Unit filename="MenuEspecialidad.cpp" />
+		<Unit filename="MenuEspecialidad.h" />
 		<Unit filename="MenuFacturacion.cpp" />
 		<Unit filename="MenuFacturacion.h" />
 		<Unit filename="MenuHistoriaClinica.cpp" />

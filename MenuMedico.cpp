@@ -1,6 +1,6 @@
 #include<iostream>
 #include "rlutil.h"
-#include "menuPrincipal.h"
+#include "menuEspecialidad.h"
 #include "Medico.h"
 using namespace std;
 
@@ -74,7 +74,7 @@ do{
 
         case 6:
             rlutil::cls();
-            cout<<"ESPECIALIDAD";
+            menuEspecialidad();
         break;
 
         case 0:

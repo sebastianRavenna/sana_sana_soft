@@ -58,7 +58,7 @@ do{
             rlutil::cls();
             cout << "\n=== ALTA DE PACIENTE ===" << endl;
             paciente.cargar();
-            archivoPaciente.guardarPaciente(paciente);
+            //archivoPaciente.guardarPaciente(paciente);
             cout<<endl;
             //paciente.mostrar();
         break;
