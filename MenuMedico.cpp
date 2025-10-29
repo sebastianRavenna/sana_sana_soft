@@ -30,6 +30,8 @@ do{
     cout<<margenMenu<<"||  4 - BAJA MEDICO           ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
     cout<<margenMenu<<"||  5 - AGENDA                ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  6 - ESPECIALIDAD          ||"<<endl;
     cout<<margenMenu<<"||============================||"<<endl;
     cout<<margenMenu<<"||  0 - VOLVER AL M. INICIAL  ||"<<endl;
     cout<<margenMenu<<" =============================="<<endl<<endl;
@@ -37,7 +39,7 @@ do{
     cout<<margenMenu<<"Ingrese la opcion deseada: ";
     cin>> numeroInicio;
 
-    while(numeroInicio>5||numeroInicio<0){
+    while(numeroInicio>6||numeroInicio<0){
         cout<<margenMenu<<"Numero incorrecto"<<endl;
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
@@ -68,6 +70,11 @@ do{
         case 5:
             rlutil::cls();
             cout<<"AGENDA";
+        break;
+
+        case 6:
+            rlutil::cls();
+            cout<<"ESPECIALIDAD";
         break;
 
         case 0:

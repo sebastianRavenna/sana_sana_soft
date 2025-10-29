@@ -9,9 +9,9 @@ class ArchivoPaciente
         Paciente leerRegistro(int tamRegistro);
         bool listarPacientes();
         bool guardarPaciente(Paciente pac);
-        int buscarPaciente(const std::string &_idPaciente);
+        int buscarPaciente(const std::string _idPaciente);
+        bool leerRegistro(int posicion,Paciente &reg);
 /*      bool agregarRegistro(const Especialidad &reg);
-        bool leerRegistro(int posicion,Especialidad &reg);
         bool modificarRegistro(Especialidad &reg,int pos);
         int buscarRegistro(int codEspecialidad); ///no se si el parametro esta bien puesto
         int contarRegistros();
