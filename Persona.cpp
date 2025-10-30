@@ -74,7 +74,7 @@ cout.flush();
 
 
 void Persona::mostrar() {
-    cout << "ID: " << getIdPersona() << endl;
+    //cout << "ID: " << getIdPersona() << endl;
     cout << "DNI: " << getDNI() << endl;
     cout << "Nombre: " << getNombre() << endl;
     cout << "Apellido: " << getApellido() << endl;

@@ -40,7 +40,6 @@ void Paciente::cargar(){
 
     if (arcPac.buscarPaciente(getDNI())>=0){
         cout<<"Ya existe el usuario."<<endl;
-        //return false;
     }else{
     Persona::cargar();
 
@@ -54,8 +53,8 @@ void Paciente::cargar(){
 }
 
 void Paciente::mostrar(){
+    cout << "Id Paciente: " << getIdPaciente() << endl;
     Persona::mostrar();
     cout << "Obra Social: " << getIdObraSocial() << endl;
-    cout << "Id Paciente: " << getIdPaciente() << endl;
     cout <<"======================" << endl;
 }

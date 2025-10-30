@@ -21,7 +21,7 @@ std::string idPac;
 
 do{
     cout<<endl;
-    rlutil::cls();
+    system("cls");
     cout <<margenTitulo<< "  ____            _            _            " << endl;
     cout <<margenTitulo<< " |  _ \\ __ _  ___(_) ___ _ __ | |_ ___  ___ " << endl;
     cout <<margenTitulo<< " | |_) / _` |/ __| |/ _ \\ '_ \\| __/ _ \\/ __|" << endl;
@@ -58,33 +58,48 @@ do{
             rlutil::cls();
             cout << "\n=== ALTA DE PACIENTE ===" << endl;
             paciente.cargar();
-            //archivoPaciente.guardarPaciente(paciente);
             cout<<endl;
-            //paciente.mostrar();
         break;
 
         case 2:
             rlutil::cls();
 
+            cout << "\n=== BUSCAR DE PACIENTE ===" <<endl<<endl;
             cout<<"INGRESE DNI DEL PACIENTE: ";
             cin>> idPac;
-            archivoPaciente.buscarPaciente(idPac);
             posBuscar=archivoPaciente.buscarPaciente(idPac);
             if(posBuscar>=0){
                 paciente=archivoPaciente.leerRegistro(posBuscar);
                 paciente.mostrar();
-            }else cout<<"No existe ese paciente."<<endl;
+            }else cout<<"Paciente no encontrado."<<endl;
             cout<<endl;
         break;
 
         case 3:
             rlutil::cls();
-            cout<<"MODIFICAR PACIENTE";
+
+            cout << "\n=== MODIFICAR DE PACIENTE ===" <<endl<<endl;
+            cout<<"INGRESE DNI DEL PACIENTE A MODIFICAR: ";
+            cin>> idPac;
+            posBuscar=archivoPaciente.buscarPaciente(idPac);
+            if(posBuscar>=0){
+                archivoPaciente.modificarRegistro(idPac, posBuscar);
+            }else cout<<"Paciente no encontrado."<<endl;
+            cout<<endl;
         break;
 
         case 4:
             rlutil::cls();
-            cout<<"BAJA PACIENTE";
+
+            cout << "\n=== ESTADO DE PACIENTE ===" <<endl<<endl;
+            cout<<"INGRESE DNI DEL PACIENTE: ";
+            cin>> idPac;
+            posBuscar=archivoPaciente.buscarPaciente(idPac);
+            if(posBuscar>=0){
+                archivoPaciente.cambioEstado(idPac, posBuscar);
+            }else cout<<"Paciente no encontrado."<<endl;
+            cout<<endl;
+
         break;
 
         case 5:
