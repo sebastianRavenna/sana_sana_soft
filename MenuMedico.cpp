@@ -1,7 +1,11 @@
 #include<iostream>
 #include "rlutil.h"
+#include <string>
 #include "menuEspecialidad.h"
 #include "Medico.h"
+#include "ArchivoMedico.h"
+#include "Funciones.h"
+
 using namespace std;
 
 
@@ -10,7 +14,10 @@ void menuMedico(){
 
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
-int numeroInicio;
+int numeroInicio,posBuscar=0;
+Medico medico;
+ArchivoMedico archivoMedico;
+string idMed;
 
 do{
     rlutil::cls();
@@ -45,26 +52,53 @@ do{
         cin>> numeroInicio;
     }
 
-    Medico medico;
+
     switch(numeroInicio){
         case 1:
+            cout << endl;
             rlutil::cls();
+            cout << "\n=== ALTA DE MEDICO ===" << endl;
             medico.cargar();
+            cout << endl;
         break;
 
         case 2:
             rlutil::cls();
-            cout<<"BUSCAR MEDICO";
+            cout << "\n=== BUSCAR MEDICO ===" <<endl<<endl;
+            cout<<"INGRESE DNI DEL MEDICO: ";
+            cin>> idMed;
+            posBuscar=archivoMedico.buscarRegistro(idMed);
+            if(posBuscar>=0){
+                medico=archivoMedico.leerRegistro(posBuscar);
+                medico.mostrar();
+            }
+            else cout << "Medico no encontrado." << endl;
+            cout << endl;
         break;
 
         case 3:
             rlutil::cls();
-            cout<<"MODIFICAR MEDICO";
+            cout << "\n=== MODIFICAR MEDICO ===" <<endl<<endl;
+            cout<<"INGRESE DNI DEL MEDICO A MODIFICAR: ";
+            cin >> idMed;
+            posBuscar=archivoMedico.buscarRegistro(idMed);
+            if(posBuscar>=0){
+                archivoMedico.modificarRegistro(idMed,posBuscar);
+            } else cout << "Medico no encontrado." << endl;
+            cout << endl;
         break;
 
         case 4:
             rlutil::cls();
-            cout<<"BAJA MEDICO";
+
+            cout << "\n=== ESTADO DE MEDICO ===" <<endl<<endl;
+            cout<<"INGRESE DNI DEL MEDICO: ";
+            cin>> idMed;
+            posBuscar=archivoMedico.buscarRegistro(idMed);
+            if(posBuscar>=0){
+                archivoMedico.cambioEstado(idMed, posBuscar);
+            }else cout<<"Medico no encontrado."<<endl;
+            cout<<endl;
         break;
 
         case 5:

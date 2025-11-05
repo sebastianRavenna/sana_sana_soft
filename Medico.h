@@ -6,12 +6,10 @@ class Medico: public Persona
     public:
         Medico();
 
-        int getIdMedico();
-        int getIdObraSocial();
+        std::string getIdMedico()const;
         int getCodEspecialidad();
         int getMatricula();
-        void setIdMedico(int idMedico);
-        void setIdObraSocial(int idObraSocial);
+        void setIdMedico(const std::string &idMedico);
         void setCodEspecialidad(int codEspecialidad);
         void setMatricula(int matricula);
         void cargar();
@@ -22,6 +20,7 @@ class Medico: public Persona
     protected:
 
     private:
-        int _idMedico, _idObraSocial, _codEspecialidad, _matricula;
+        int _codEspecialidad, _matricula;
+        char _idMedico[15];
 };
 

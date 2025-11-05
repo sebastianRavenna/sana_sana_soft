@@ -1,29 +1,52 @@
 # depslib dependency file v1.0
-1760704745 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\main.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\agenda.cpp
 	<iostream>
-	"menuPrincipal.h"
+	"Agenda.h"
 
-1760708597 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuprincipal.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\agenda.h
+	"Fecha.h"
+	"Hora.h"
 
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\main.cpp
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.h
+	<string>
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.h
+	<string>
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivoespecialidad.cpp
+	<string>
+	"ArchivoEspecialidad.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivoespecialidad.h
+	<string>
+	"Especialidad.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\especialidad.h
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopaciente.cpp
 	<iostream>
-	"menuPrincipal.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menuprincipal.h
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menuprincipal.cpp
-	<iostream>
+	<string>
+	"ArchivoPaciente.h"
+	"Paciente.h"
+	"Funciones.h"
 	"rlutil.h"
-	"MenuPrincipal.h"
-	"MenuFacturacion.h"
-	"MenuListados.h"
-	"MenuMedico.h"
-	"MenuObraSocial.h"
-	"MenuPaciente.h"
-	"MenuReportes.h"
-	"MenuTurno.h"
 
-1761170682 c:\users\tim\documents\github\sana_sana_soft\rlutil.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopaciente.h
+	<string>
+	"Paciente.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.h
+	<string>
+	"Persona.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.h
+	<string>
+	"Fecha.h"
+	"Hora.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.h
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -37,56 +60,107 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1760795065 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuprincipal.cpp
-	<iostream>
-	"rlutil.h"
-	"MenuPrincipal.h"
-	"MenuFacturacion.h"
-	"MenuListados.h"
-	"MenuMedico.h"
-	"MenuObraSocial.h"
-	"MenuPaciente.h"
-	"MenuReportes.h"
-	"MenuTurno.h"
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.cpp
+	"ArchivoPersona.h"
 
-1760704745 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\rlutil.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.h
+	<string>
+	"Persona.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\especialidad.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"Funciones.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.cpp
+	<iostream>
+	<cstring>
+	"Factura.h"
+	"Fecha.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.h
+	<cstring>
+	"Fecha.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.cpp
+	<string>
+	<iostream>
+	"Funciones.h"
+	<ctime>
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\historiaclinica.cpp
+	<iostream>
+	<cstring>
+	"HistoriaClinica.h"
+	"Funciones.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\historiaclinica.h
+	<string>
+	"Fecha.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.cpp
 	<iostream>
 	<string>
-	<cstdio>
-	<stdio.h>
-	<string.h>
-	<windows.h>
-	<conio.h>
-	<termios.h>
-	<unistd.h>
-	<sys/ioctl.h>
-	<sys/types.h>
-	<sys/time.h>
+	"Hora.h"
 
-1761053103 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menufacturacion.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\main.cpp
+	<iostream>
+	"menuPrincipal.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.h
+
+1762378122 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"Funciones.h"
+	"ArchivoMedico.h"
+
+1762363485 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.h
+	"Persona.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuespecialidad.cpp
+	<iostream>
+	"rlutil.h"
+	"Especialidad.h"
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 	"Factura.h"
 
-1761441408 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuhistoriaclinica.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+	"menuHistoriaClinica.h"
+	"HistoriaClinica.h"
+
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuhistoriaclinica.h
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.cpp
 	<iostream>
 	"rlutil.h"
 	"ArchivoPaciente.h"
 
-1761763035 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menumedico.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Medico.h"
-
-1761054152 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 	"ObraSocial.h"
 
-1761760689 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.cpp
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.h
+	<cstring>
+	<string>
+
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.cpp
 	<iostream>
 	"rlutil.h"
 	"string"
@@ -95,81 +169,7 @@
 	"menuHistoriaClinica.h"
 	"Funciones.h"
 
-1760795282 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1760795282 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuturno.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1760791613 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menufacturacion.h
-
-1760792855 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menulistados.h
-
-1760792736 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menumedico.h
-
-1760792811 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuobrasocial.h
-
-1760792737 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menupaciente.h
-
-1760792779 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menureportes.h
-
-1760792762 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuturno.h
-
-1760709168 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\main.cpp
-	<iostream>
-	"menuPrincipal.h"
-
-1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.h
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Factura.h"
-
-1760709168 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\rlutil.h
-	<iostream>
-	<string>
-	<cstdio>
-	<stdio.h>
-	<string.h>
-	<windows.h>
-	<conio.h>
-	<termios.h>
-	<unistd.h>
-	<sys/ioctl.h>
-	<sys/types.h>
-	<sys/time.h>
-
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1760968906 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Medico.h"
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"ObraSocial.h"
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Persona.h"
-	"Paciente.h"
-
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuprincipal.cpp
 	<iostream>
 	"rlutil.h"
 	"MenuPrincipal.h"
@@ -181,445 +181,77 @@
 	"MenuReportes.h"
 	"MenuTurno.h"
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menufacturacion.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menulistados.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuobrasocial.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menupaciente.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.h
 
-1760799956 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.h
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menureportes.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 
-1760799956 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuturno.cpp
 	<iostream>
 	"rlutil.h"
 	"menuPrincipal.h"
 
-1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.cpp
-	<iostream>
-	"Fecha.h"
-
-1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\fecha.h
-	<string>
-
-1760798393 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.cpp
-	"ArchivoPersona.h"
-
-1760798357 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivopersona.h
-	<string>
-	"Persona.h"
-
-1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.h
-	<string>
-	"Fecha.h"
-	"Hora.h"
-
-1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
-	<iostream>
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.cpp
 	<cstring>
 	<string>
-	"Persona.h"
+	<iostream>
+	"ObraSocial.h"
 	"Funciones.h"
 
-1761332684 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.cpp
-	"ArchivoPersona.h"
-
-1761333129 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopersona.h
-	<string>
-	"Persona.h"
-
-1761434055 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.h
-	<string>
-	"Fecha.h"
-	"Hora.h"
-
-1761261460 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.h
-	<string>
-
-1761264150 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\fecha.cpp
-	<iostream>
-	<ctime>
-	"Fecha.h"
-
-1761760498 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\persona.cpp
-	<iostream>
-	<cstring>
-	<string>
-	"Persona.h"
-	"Funciones.h"
-
-1761762994 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.cpp
 	<iostream>
 	<cstring>
 	"Paciente.h"
 	"Funciones.h"
 	"ArchivoPaciente.h"
 
-1761603883 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\paciente.h
-	<string>
-	"Persona.h"
-
-1761760561 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\medico.cpp
-	<iostream>
-	<cstring>
-	"Medico.h"
-	"Funciones.h"
-
-1760825885 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\medico.h
-	"Persona.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\archivopersona.cpp
-	"ArchivoPersona.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\archivopersona.h
-	<string>
-	"Persona.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\persona.h
-	<string>
-	"Fecha.h"
-	"Hora.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\fecha.h
-	<string>
-
-1761226394 source:c:\users\tim\documents\github\sana_sana_soft\factura.cpp
-	<iostream>
-	<cstring>
-	"Factura.h"
-	"Fecha.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\factura.h
-	<cstring>
-	"Fecha.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\fecha.cpp
-	<iostream>
-	"Fecha.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\medico.cpp
-	<iostream>
-	<cstring>
-	"Medico.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\medico.h
-	"Persona.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menufacturacion.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Factura.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menulistados.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menumedico.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Medico.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menuobrasocial.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"ObraSocial.h"
-
-1761230145 source:c:\users\tim\documents\github\sana_sana_soft\menupaciente.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"Persona.h"
-	"Paciente.h"
-	"HistoriaClinica.h"
-	"menuHistoriaClinica.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\paciente.h
-	"Persona.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menufacturacion.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menulistados.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menumedico.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menuobrasocial.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menupaciente.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menureportes.h
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\menuturno.h
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menureportes.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\menuturno.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\paciente.cpp
-	"Paciente.h"
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\persona.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\persona.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"Persona.h"
 	"Funciones.h"
 
-1761245420 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\factura.cpp
-	<iostream>
-	<cstring>
-	"Factura.h"
-	"Fecha.h"
-
-1760984186 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\factura.h
-	<cstring>
-	"Fecha.h"
-	<cstring>
-	"Fecha.h"
-
-1761053874 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\obrasocial.h
-	<cstring>
-	<string>
-	<cstring>
-	<string>
-
-1761137278 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\obrasocial.cpp
-	<cstring>
-	<string>
-	<iostream>
-	"ObraSocial.h"
-	"Funciones.h"
-	<cstring>
-	<string>
-	<iostream>
-	"ObraSocial.h"
-	"Funciones.h"
-
-1761169627 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\funciones.cpp
-	<string>
-	<iostream>
-	"Funciones.h"
-	<ctime>
-	<string>
-	<iostream>
-	"Funciones.h"
-	<ctime>
-
-1761136879 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\funciones.h
-
-1761170449 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\hora.cpp
-	<iostream>
-	<string>
-	"Hora.h"
-	<iostream>
-	<string>
-	"Hora.h"
-
-1761137801 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\hora.h
-	<string>
-	<string>
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\hora.h
-	<string>
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\funciones.cpp
-	<string>
-	<iostream>
-	"Funciones.h"
-	<ctime>
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\funciones.h
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\hora.cpp
-	<iostream>
-	<string>
-	"Hora.h"
-
-1761170682 c:\users\tim\documents\github\sana_sana_soft\obrasocial.h
-	<cstring>
-	<string>
-
-1761170682 source:c:\users\tim\documents\github\sana_sana_soft\obrasocial.cpp
-	<cstring>
-	<string>
-	<iostream>
-	"ObraSocial.h"
-	"Funciones.h"
-
-1761227967 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.h
-	<string>
-
-1760968906 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.cpp
-	<iostream>
-	<cstring>
-	"Factura.h"
-	"Fecha.h"
-
-1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\factura.h
-	<cstring>
-	"Fecha.h"
-
-1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.cpp
-	<string>
-	<iostream>
-	"Funciones.h"
-	<ctime>
-
-1761151283 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\funciones.h
-
-1761227967 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\hora.cpp
-	<iostream>
-	<string>
-	"Hora.h"
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.cpp
-	<iostream>
-	<cstring>
-	"Medico.h"
-
-1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\medico.h
-	"Persona.h"
-
-1761151283 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.h
-	<cstring>
-	<string>
-
-1760968906 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.h
-	"Persona.h"
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\obrasocial.cpp
-	<cstring>
-	<string>
-	<iostream>
-	"ObraSocial.h"
-	"Funciones.h"
-
-1761151283 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\paciente.cpp
-	"Paciente.h"
-
-1761228471 source:c:\users\tim\documents\github\sana_sana_soft\archivoespecialidad.cpp
-	<string>
-	"ArchivoEspecialidad.h"
-
-1761228471 c:\users\tim\documents\github\sana_sana_soft\archivoespecialidad.h
-	<string>
-	"Especialidad.h"
-
-1761228471 c:\users\tim\documents\github\sana_sana_soft\especialidad.h
-
-1761228471 source:c:\users\tim\documents\github\sana_sana_soft\especialidad.cpp
-	<iostream>
-	<cstring>
-	"Especialidad.h"
-	"Funciones.h"
-
-1761228145 source:c:\users\tim\documents\github\sana_sana_soft\historiaclinica.cpp
-	<iostream>
-	<cstring>
-	"HistoriaClinica.h"
-	"Funciones.h"
-
-1761221584 c:\users\tim\documents\github\sana_sana_soft\historiaclinica.h
-	<string>
-	"Fecha.h"
-
-1761230218 source:c:\users\tim\documents\github\sana_sana_soft\menuhistoriaclinica.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"menuHistoriaClinica.h"
-	"HistoriaClinica.h"
-
-1761229551 c:\users\tim\documents\github\sana_sana_soft\menuhistoriaclinica.h
-
-1761402871 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivoespecialidad.cpp
-	<string>
-	"ArchivoEspecialidad.h"
-
-1761228455 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivoespecialidad.h
-	<string>
-	"Especialidad.h"
-
-1761228455 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\especialidad.h
-
-1761228455 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\especialidad.cpp
-	<iostream>
-	<cstring>
-	"Especialidad.h"
-	"Funciones.h"
-
-1761245420 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\historiaclinica.cpp
-	<iostream>
-	<cstring>
-	"HistoriaClinica.h"
-	"Funciones.h"
-
-1761245420 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\historiaclinica.h
-	<string>
-	"Fecha.h"
-
-1761403638 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.cpp
-	<iostream>
-	"rlutil.h"
-	"menuPrincipal.h"
-	"menuHistoriaClinica.h"
-	"HistoriaClinica.h"
-
-1761403638 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuhistoriaclinica.h
-
-1761760349 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.cpp
-	<iostream>
-	<string>
-	"ArchivoPaciente.h"
-	"Paciente.h"
-
-1761739726 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivopaciente.h
-	<string>
-	"Paciente.h"
-
-1761581110 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\agenda.cpp
-	<iostream>
-	"Agenda.h"
-
-1761581110 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\agenda.h
-	"Fecha.h"
-	"Hora.h"
-
-1761581110 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\turno.cpp
+1762355256 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\turno.cpp
 	<iostream>
 	"Turno.h"
 
-1761581111 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\turno.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\turno.h
 
-1761759581 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivomedico.cpp
+1762369076 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menumedico.cpp
 	<iostream>
+	"rlutil.h"
+	<string>
+	"menuEspecialidad.h"
+	"Medico.h"
 	"ArchivoMedico.h"
+	"Funciones.h"
 
-1761759581 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\archivomedico.h
+1762355256 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\menuespecialidad.h
+
+1762380129 c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivomedico.h
 	<string>
 	"Medico.h"
 
-1761763063 source:c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuespecialidad.cpp
+1762380129 source:c:\users\julie\desktop\tp programacion ii\sana_sana_soft\archivomedico.cpp
 	<iostream>
+	<string>
+	"ArchivoMedico.h"
+	"Medico.h"
+	"Funciones.h"
 	"rlutil.h"
-	"Especialidad.h"
 

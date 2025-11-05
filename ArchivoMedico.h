@@ -7,14 +7,17 @@ class ArchivoMedico
 {
     public:
         ArchivoMedico(const std::string &nombreArchivo="medico.dat");
-        Medico leerRegistro(int pos);
+
+        bool guardarMedico(const Medico &reg);//Alta
+        int buscarRegistro(const std::string _idMedico);//Buscar Pos del medico
+        Medico leerRegistro(int pos);//Muestra el medico de la Pos encontrada
         bool leerRegistro(int posicion,Medico &reg);
-        bool agregarRegistro(const Medico &reg);
-        bool modificarRegistro(Medico &reg, int posicion);
-        int buscarRegistro(int idMedico);
-        int contarRegistro();
-        bool bajaLogica(int idMedico);
-        bool altaLogica(int idMedico);
+        ///bool modificarRegistro(Medico &reg, int posicion);
+        bool modificarRegistro(const std::string _idMedico, int pos);
+        bool cambioEstado(const std::string _idPaciente, int pos);
+        bool listarMedicos();
+        //bool bajaLogica(std::string idMedico);
+        //bool altaLogica(std::string idMedico);
 
 
 
