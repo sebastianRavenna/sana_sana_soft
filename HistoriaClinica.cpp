@@ -2,13 +2,16 @@
 #include <cstring>
 #include "HistoriaClinica.h"
 #include "Funciones.h"
+#include "ArchivoHistoriaClinica.h"
+#include "Fecha.h"
 
 using namespace std;
 
+//constructor
 HistoriaClinica::HistoriaClinica(){
     _idHistoria = 0;
-    _idPaciente = 0;
-    _idMedico = 0;
+    strcpy(_dniPaciente, "P-00000000");
+    strcpy(_idMedico, "M-00000000" );
     _fechaConsulta = Fecha();
     strcpy(_descripcion,"SinDescripcion");
     _estado = true;
@@ -18,15 +21,15 @@ int HistoriaClinica::getIdHistoria(){
     return _idHistoria;
 }
 
-int HistoriaClinica::getIdPaciente(){
-    return _idPaciente;
+std::string HistoriaClinica::getDniPaciente() const {
+    return _dniPaciente;
 }
 
 Fecha HistoriaClinica::getFechaConsulta(){
     return _fechaConsulta;
 }
 
-int HistoriaClinica::getIdMedico(){
+std::string HistoriaClinica::getIdMedico()const{
     return _idMedico;
 }
 
@@ -42,12 +45,14 @@ void HistoriaClinica::setIdHistoria(int idHistoria){
     _idHistoria = idHistoria;
 }
 
-void HistoriaClinica::setIdPaciente(int idPaciente){
-    _idPaciente = idPaciente;
+void HistoriaClinica::setDniPaciente(const std::string &dniPaciente) {
+    strncpy(_dniPaciente, dniPaciente.c_str(), sizeof(_dniPaciente) - 1);
+    _dniPaciente[sizeof(_dniPaciente) - 1] = '\0';
 }
 
-void HistoriaClinica::setIdMedico(int idMedico){
-    _idMedico = idMedico;
+void HistoriaClinica::setIdMedico(const std::string &idMed){
+    strncpy(_idMedico, idMed.c_str(), sizeof(_idMedico) - 1);
+    _idMedico[sizeof(_idMedico) - 1] = '\0';
 }
 
 void HistoriaClinica::setFechaConsulta(Fecha f){
@@ -65,46 +70,59 @@ void HistoriaClinica::setEstado(bool estado){
 
 void HistoriaClinica::mostrar(){
     cout<<"ID Historia Clinica: "<<getIdHistoria()<<endl;
-    cout<<"ID Paciente: "<<getIdPaciente()<<endl;
+    cout<<"DNI Paciente: "<<getDniPaciente()<<endl;
     cout<<"ID Medico: "<<getIdMedico()<<endl;
-    cout<<"Fecha: ";
+    cout<<"Fecha de Consulta: ";
     getFechaConsulta().Mostrar();
-    cout<<endl;
     cout<<"Descripcion: "<<getDescripcion()<<endl;
-    cout<<"Estado: ";
+    /*cout<<"Estado: ";
     if(getEstado()){
         cout<< "Activo"<<endl;
     }
     else{
         cout<<"Inactivo"<<endl;
     }
-    cout<<endl;
+    cout<<endl;*/
 
 }
 
-void HistoriaClinica::cargar(){
-    int idHC, idPac, idMed;
+void HistoriaClinica::mostrarxPaciente(const std::string &nombreMedico, const std::string &sexoMedico){
+    cout<<"ID Historia Clinica: "<<getIdHistoria()<<endl;
+    if(sexoMedico == "F"){
+        cout<<"Atendido por la Dra. "<<nombreMedico<<" (ID: "<<getIdMedico()<<")"<<endl;
+    }
+    else{
+        cout<<"Atendido por el Dr. "<<nombreMedico<<" (ID: "<<getIdMedico()<<")"<<endl;
+    }
+    cout<<"Fecha de Consulta: ";
+    getFechaConsulta().Mostrar();
+    cout<<"Descripcion: "<<getDescripcion()<<endl;
+   // cout<<"Estado "<<getEstado()<<endl;
+
+
+}
+
+void HistoriaClinica::cargar(const std::string &idPac, const std::string &idMed){
+
     Fecha fechaCons;
     std::string descrip;
-    bool est;
+    bool esValido = false;
 
-    cout<<"ID Historia Clinica: ";
-    cin>>idHC;
-    setIdHistoria(idHC);
-    cout << endl;
+    //cout<<"DNI Paciente: ";
+    setDniPaciente(idPac);
+    //cout << endl;
 
-    cout<<"ID Paciente: ";
-    cin>>idPac;
-    setIdPaciente(idPac);
-    cout << endl;
-
-    cout<<"ID Medico: ";
-    cin>>idMed;
+    //cout<<"ID Medico: ";
     setIdMedico(idMed);
-    cout << endl;
+    //cout << endl;
 
-    cout<<"Fecha: ";
+    cout<<"Fecha: "<< endl;
+    do{
     fechaCons.Cargar();
+    esValido = fechaCons.verificarFecha();
+    }
+    while(esValido == false);
+
     setFechaConsulta(fechaCons);
     cout << endl;
 
@@ -112,7 +130,16 @@ void HistoriaClinica::cargar(){
     setDescripcion(cargarCadena());
     cout << endl;
 
+
     _estado=true;
 }
 
+/*void HistoriaClinica::abmLogica(HistoriaClinica &his){
+    if(his.getEstado()){
+        his.setEstado(false);
+    }
+    else{
+        his.setEstado(true);
+    }
+}*/
 

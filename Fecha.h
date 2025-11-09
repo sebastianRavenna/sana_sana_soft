@@ -22,6 +22,7 @@ class Fecha{
     int calcularAntiguedad(Fecha fechaAlta);
     bool esBisiesto(int anio);
     int diasEnMes(int mes, int anio);
+    bool verificarFecha();
 
     std::string toString();
 };

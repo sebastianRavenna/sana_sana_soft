@@ -12,16 +12,16 @@ Especialidad::Especialidad()
    _estado=true;
 }
 void Especialidad::cargar(){
-cout << "Codigo de especialidad: " << endl;
+/*cout << "Codigo de especialidad: " << endl;
 cin >>_codEspecialidad;
 cin.ignore();
-cout << endl;
+cout << endl;*/
 
-cout << "Descripcion: "  << endl;
+cout << "Descripcion: ";
 setDescripcion(cargarCadena());
 cout << endl;
 
-cout << "Valor de la consulta: " << endl;
+cout << "Valor de la consulta: ";
 cin >> _valorConsulta;
 cin.ignore();
 cout << endl;

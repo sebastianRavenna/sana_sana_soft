@@ -1,5 +1,6 @@
 #include <string>
 #include "ArchivoEspecialidad.h"
+#include<iostream>
 using namespace std;
 
 ArchivoEspecialidad::ArchivoEspecialidad(const string &nombreArchivo){
@@ -15,6 +16,7 @@ bool ArchivoEspecialidad::agregarRegistro(const Especialidad &reg )
     if (pEspecialidad==NULL)return false;
 
     fwrite(&reg,tamanioRegistro,1,pEspecialidad);
+    cout<<"Guardado Exitoso";
     fclose(pEspecialidad);
 
     return true;
@@ -56,10 +58,9 @@ bool ArchivoEspecialidad::modificarRegistro(Especialidad &reg, int posicion){
 
 int ArchivoEspecialidad::buscarRegistro(int codEspecialidad){
 Especialidad reg;
-
-FILE *pEspecialidad;
-pEspecialidad=fopen(_nombreArchivo.c_str(),"rb");
-if(pEspecialidad==nullptr){
+FILE *pEspecialidad=fopen(_nombreArchivo.c_str(),"rb");
+if(pEspecialidad==NULL){
+    cout<<"ERROR EN EL ARCHIVO"<<endl;
     return -2;
 }
 
@@ -111,4 +112,15 @@ Especialidad ArchivoEspecialidad::leerRegistro(int pos){
     fclose(pEspecialidad);
     return obj;
 
+}
+
+int ArchivoEspecialidad::contarRegistros(){
+    FILE* pEspecialidad = fopen(_nombreArchivo.c_str(), "rb");
+    if(pEspecialidad == NULL){
+        return 0;
+    }
+    fseek(pEspecialidad, 0, SEEK_END);
+    int cantidadRegistros = ftell(pEspecialidad) / tamanioRegistro;
+    fclose(pEspecialidad);
+    return cantidadRegistros;
 }

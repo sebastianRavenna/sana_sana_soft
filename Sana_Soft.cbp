@@ -38,6 +38,8 @@
 		<Unit filename="Agenda.h" />
 		<Unit filename="ArchivoEspecialidad.cpp" />
 		<Unit filename="ArchivoEspecialidad.h" />
+		<Unit filename="ArchivoHistoriaClinica.cpp" />
+		<Unit filename="ArchivoHistoriaClinica.h" />
 		<Unit filename="ArchivoMedico.cpp" />
 		<Unit filename="ArchivoMedico.h" />
 		<Unit filename="ArchivoPaciente.cpp" />
@@ -67,6 +69,10 @@
 		<Unit filename="MenuListados.h" />
 		<Unit filename="MenuMedico.cpp" />
 		<Unit filename="MenuMedico.h" />
+		<Unit filename="MenuModificarEspecialidad.cpp" />
+		<Unit filename="MenuModificarEspecialidad.h" />
+		<Unit filename="MenuModificarHistoriaClinica.cpp" />
+		<Unit filename="MenuModificarHistoriaClinica.h" />
 		<Unit filename="MenuObraSocial.cpp" />
 		<Unit filename="MenuObraSocial.h" />
 		<Unit filename="MenuPaciente.cpp" />
@@ -83,10 +89,14 @@
 		<Unit filename="Paciente.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
+		<Unit filename="Sana_Soft.cbp" />
 		<Unit filename="Turno.cpp" />
 		<Unit filename="Turno.h" />
+		<Unit filename="historiaClinica.dat" />
 		<Unit filename="main.cpp" />
+		<Unit filename="medico.dat" />
 		<Unit filename="menuHistoriaClinica.h" />
+		<Unit filename="pacientes.dat" />
 		<Unit filename="rlutil.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

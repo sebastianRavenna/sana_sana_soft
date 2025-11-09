@@ -17,6 +17,7 @@ char margenMenu[]={"                    "};
 int numeroInicio, posBuscar=0;
 Paciente paciente;
 ArchivoPaciente archivoPaciente;
+
 std::string idPac;
 
 do{
@@ -97,6 +98,7 @@ do{
             posBuscar=archivoPaciente.buscarPaciente(idPac);
             if(posBuscar>=0){
                 archivoPaciente.cambioEstado(idPac, posBuscar);
+
             }else cout<<"Paciente no encontrado."<<endl;
             cout<<endl;
 

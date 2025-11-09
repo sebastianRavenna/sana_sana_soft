@@ -15,6 +15,7 @@ class ArchivoEspecialidad
         bool bajaLogica(int codEspecialidad);
         bool altaLogica(int codEspecialidad);
 
+
     private:
      std::string _nombreArchivo;
      int tamanioRegistro;

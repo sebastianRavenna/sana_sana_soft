@@ -112,3 +112,20 @@ std::string Fecha::toString(){
 void Fecha::Mostrar(){
         cout<<_dia<<"/"<<_mes<<"/"<<_anio<<endl;
     }
+
+bool Fecha::verificarFecha(){
+    Fecha hoy;
+    hoy.fechaActual();
+if (_anio > hoy.getAnio() ||
+       (_anio == hoy.getAnio() && _mes > hoy.getMes()) ||
+       (_anio == hoy.getAnio() && _mes == hoy.getMes() && _dia > hoy.getDia())){
+            cout<<endl;
+            cout<<"No es posible cargar una fecha posterior al dia de hoy."<<endl;
+            cout<<"Intente nuevamente"<<endl<<endl;
+            return false;
+       }
+    else{
+        return true;
+    }
+
+}
