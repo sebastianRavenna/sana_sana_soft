@@ -97,7 +97,7 @@ void HistoriaClinica::mostrarxPaciente(const std::string &nombreMedico, const st
     cout<<"Fecha de Consulta: ";
     getFechaConsulta().Mostrar();
     cout<<"Descripcion: "<<getDescripcion()<<endl;
-   // cout<<"Estado "<<getEstado()<<endl;
+    cout<<"Estado "<<getEstado()<<endl;
 
 
 }
@@ -134,12 +134,4 @@ void HistoriaClinica::cargar(const std::string &idPac, const std::string &idMed)
     _estado=true;
 }
 
-/*void HistoriaClinica::abmLogica(HistoriaClinica &his){
-    if(his.getEstado()){
-        his.setEstado(false);
-    }
-    else{
-        his.setEstado(true);
-    }
-}*/
 

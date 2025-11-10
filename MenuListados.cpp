@@ -1,6 +1,8 @@
 #include<iostream>
 #include "rlutil.h"
 #include "ArchivoPaciente.h"
+#include "ArchivoEspecialidad.h"
+#include "ArchivoHistoriaClinica.h"
 using namespace std;
 
 
@@ -11,6 +13,8 @@ char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
 ArchivoPaciente pacientes;
+ArchivoEspecialidad archivoEspecialidad;
+ArchivoHistoriaClinica archivoHistoriaClinica;
 
 
 do{
@@ -62,7 +66,40 @@ do{
 
         case 3:
             rlutil::cls();
-            cout<<"LISTAR H. CLINICAS";
+            cout<<"=== LISTAR HISTORIAS CLINICAS ==="<<endl<<endl;
+            cout<<" =============================="<<endl;
+            cout<<"||  1 - POR ID                ||"<<endl;
+            cout<<"||                            ||"<<endl;
+            cout<<"||  2 - POR FECHA             ||"<<endl;
+            cout<<"||                            ||"<<endl;
+            cout<<"||  3 - POR DNI PACIENTE      ||"<<endl;
+            cout<<"||============================||"<<endl;
+            cout<<"||  0 - VOLVER AL M. ANTERIOR ||"<<endl;
+            cout<<" =============================="<<endl<<endl;
+
+            cout<<"Ingrese la opcion deseada: ";
+            cin>> numeroInicio;
+
+            if(numeroInicio == 1){
+                    rlutil::cls();
+                    cout<<"=== HISTORIAS CLINICAS ORDENADAS POR ID ==="<<endl<<endl;
+                    archivoHistoriaClinica.listarHistoriaClinica();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+            else if(numeroInicio == 2){
+                    rlutil::cls();
+                    cout<<"=== HISTORIAS CLINICAS ORDENADAS POR FECHA ==="<<endl<<endl;
+            }
+            else if(numeroInicio == 3){
+                    rlutil::cls();
+                    cout<<"=== HISTORIAS CLINICAS ORDENADAS POR DNI PACIENTE ==="<<endl<<endl;
+            }
+            else{
+                    cout<<"Opcion no valida."<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+
         break;
 
         case 4:

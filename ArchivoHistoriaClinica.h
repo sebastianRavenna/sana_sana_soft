@@ -15,7 +15,7 @@ class ArchivoHistoriaClinica{
         bool modificarRegistro(HistoriaClinica his, int posicion);
 
         int CantidadRegistros();
-        //bool abmLogico(std::string &dniPacienteBuscado);
+        bool abmLogico(std::string &dniPacienteBuscado);
 
     private:
         std::string _nombreArchivo;

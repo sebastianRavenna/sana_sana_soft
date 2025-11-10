@@ -24,6 +24,8 @@ bool ArchivoHistoriaClinica::listarHistoriaClinica(){
     }
     while(fread(&his, _tamanioRegistro, 1, pHistoria)==1){
         his.mostrar();
+        cout<<"------------------------------"<<endl;
+        cout<<endl;
     }
     fclose(pHistoria);
     return true;
@@ -147,7 +149,7 @@ bool ArchivoHistoriaClinica::modificarRegistro(HistoriaClinica his, int posicion
 
 }
 
-/*bool ArchivoHistoriaClinica::abmLogico(std::string &dniPacienteBuscado){
+bool ArchivoHistoriaClinica::abmLogico(std::string &dniPacienteBuscado){
     int posBuscar=0;
     HistoriaClinica his;
     FILE* pHistoria = fopen(_nombreArchivo.c_str(), "rb+");
@@ -163,12 +165,14 @@ bool ArchivoHistoriaClinica::modificarRegistro(HistoriaClinica his, int posicion
                 his.setEstado(false);
                 fseek(pHistoria, posBuscar*_tamanioRegistro, SEEK_SET);
                 fwrite(&his, _tamanioRegistro, 1, pHistoria);
+                fseek(pHistoria, (posBuscar+1)*_tamanioRegistro, SEEK_SET);
                 datoEncontrado = true;
                 }
             else{
-                his.setEstado(false);
+                his.setEstado(true);
                 fseek(pHistoria, posBuscar*_tamanioRegistro, SEEK_SET);
                 fwrite(&his,_tamanioRegistro, 1, pHistoria);
+                fseek(pHistoria, (posBuscar+1)*_tamanioRegistro, SEEK_SET);
                 datoEncontrado = true;
             }
         }
@@ -177,10 +181,14 @@ bool ArchivoHistoriaClinica::modificarRegistro(HistoriaClinica his, int posicion
     fclose(pHistoria);
 
     if (datoEncontrado) {
-        cout <<"Se dieron de baja todas las historiacas clinicas del paciente"<<endl<<endl;
+        cout<<endl;
+        cout <<"Se modifico el estado de todas las historias clinicas del paciente"<<endl<<endl;
     }
     else{
+        cout<<endl;
         cout<<"El paciente no tiene Historia Clinica" << endl<<endl;
     }
     return datoEncontrado;
-}*/
+}
+
+

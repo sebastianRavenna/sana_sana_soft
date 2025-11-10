@@ -5,6 +5,7 @@
 #include "ArchivoPaciente.h"
 #include "menuHistoriaClinica.h"
 #include "Funciones.h"
+#include "ArchivoHistoriaClinica.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ char margenMenu[]={"                    "};
 int numeroInicio, posBuscar=0;
 Paciente paciente;
 ArchivoPaciente archivoPaciente;
+ArchivoHistoriaClinica archivoHistoria;
 
 std::string idPac;
 
@@ -98,6 +100,7 @@ do{
             posBuscar=archivoPaciente.buscarPaciente(idPac);
             if(posBuscar>=0){
                 archivoPaciente.cambioEstado(idPac, posBuscar);
+                archivoHistoria.abmLogico(idPac);
 
             }else cout<<"Paciente no encontrado."<<endl;
             cout<<endl;
