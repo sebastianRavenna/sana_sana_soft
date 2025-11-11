@@ -12,7 +12,7 @@ void menuListado(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
-ArchivoPaciente pacientes;
+ArchivoPaciente archivoPacientes;
 ArchivoEspecialidad archivoEspecialidad;
 ArchivoHistoriaClinica archivoHistoriaClinica;
 
@@ -35,9 +35,11 @@ do{
     cout<<margenMenu<<"||                            ||"<<endl;
     cout<<margenMenu<<"||  4 - LISTAR MEDICOS        ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  5 - LISTAR O. SOCIALES    ||"<<endl;
+    cout<<margenMenu<<"||  5 - LISTAR ESPECIALIDADES ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  6 - LISTAR FACTURAS       ||"<<endl;
+    cout<<margenMenu<<"||  6 - LISTAR O. SOCIALES    ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  7 - LISTAR FACTURAS       ||"<<endl;
     cout<<margenMenu<<"||============================||"<<endl;
     cout<<margenMenu<<"||  0 - VOLVER AL M. INICIAL  ||"<<endl;
     cout<<margenMenu<<" =============================="<<endl<<endl;
@@ -45,7 +47,7 @@ do{
     cout<<margenMenu<<"Ingrese la opcion deseada: ";
     cin>> numeroInicio;
 
-    while(numeroInicio>6||numeroInicio<0){
+    while(numeroInicio>7||numeroInicio<0){
         cout<<margenMenu<<"Numero incorrecto"<<endl;
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
@@ -60,8 +62,45 @@ do{
 
         case 2:
             rlutil::cls();
-            cout << "\n=== LISTANDO PACIENTES DEL ARCHIVO ===" << endl<< endl;
-            pacientes.listarPacientes();
+            cout<<"=== LISTAR PACIENTES ==="<<endl<<endl;
+            cout<<" =================================="<<endl;
+            cout<<"||   1 - TODOS (por Apellido)     ||"<<endl;
+            cout<<"||                                ||"<<endl;
+            cout<<"||   2 - ACTIVOS (por Apellido)   ||"<<endl;
+            cout<<"||                                ||"<<endl;
+            cout<<"||   3 - INACTIVOS (por Apellido) ||"<<endl;
+            cout<<"||================================||"<<endl;
+            cout<<"||   0 - VOLVER AL M. ANTERIOR    ||"<<endl;
+            cout<<" =================================="<<endl<<endl;
+
+            cout<<"Ingrese la opcion deseada: ";
+            cin>> numeroInicio;
+
+             if(numeroInicio == 1){
+                    rlutil::cls();
+                    cout<<"=== TODOS LOS PACIENTES ORDENADOS POR APELLIDO ==="<<endl<<endl;
+                    archivoPacientes.listarTodoPorApellido();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+            else if(numeroInicio == 2){
+                    rlutil::cls();
+                    cout<<"=== PACIENTES ACTIVOS ORDENADOS POR APELLIDO ==="<<endl<<endl;
+                    //METODO
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+                    }
+            else if(numeroInicio == 3){
+                    rlutil::cls();
+                    cout<<"=== PACIENTES INACTIVOS ORDENADOS POR APELLIDO ==="<<endl<<endl;
+                    //METODO
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+            else{
+                    cout<<"Opcion no valida."<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
         break;
 
         case 3:
@@ -90,10 +129,16 @@ do{
             else if(numeroInicio == 2){
                     rlutil::cls();
                     cout<<"=== HISTORIAS CLINICAS ORDENADAS POR FECHA ==="<<endl<<endl;
+                    archivoHistoriaClinica.listarPorFecha();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
             }
             else if(numeroInicio == 3){
                     rlutil::cls();
                     cout<<"=== HISTORIAS CLINICAS ORDENADAS POR DNI PACIENTE ==="<<endl<<endl;
+                    archivoHistoriaClinica.listarPorDNI();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
             }
             else{
                     cout<<"Opcion no valida."<<endl<<endl;
@@ -109,10 +154,40 @@ do{
 
         case 5:
             rlutil::cls();
-            cout<<"LISTAR O. SOCIALES";
+            cout<<"=== LISTAR ESPECIALIDADES MEDICAS ==="<<endl<<endl;
+            cout<<" =============================="<<endl;
+            cout<<"||  1 - POR ID                ||"<<endl;
+            cout<<"||                            ||"<<endl;
+            cout<<"||  2 - POR NOMBRE            ||"<<endl;
+            cout<<"||============================||"<<endl;
+            cout<<"||  0 - VOLVER AL M. ANTERIOR ||"<<endl;
+            cout<<" =============================="<<endl<<endl;
+
+            cout<<"Ingrese la opcion deseada: ";
+            cin>> numeroInicio;
+
+             if(numeroInicio == 1){
+                    rlutil::cls();
+                    cout<<"=== ESPECIALIDADES MEDICAS ORDENADAS POR ID ==="<<endl<<endl;
+                    archivoEspecialidad.listarEspecialidad();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+            else if(numeroInicio == 2){
+                    rlutil::cls();
+                    cout<<"=== ESPECIALIDADES MEDICAS ORDENADAS POR NOMBRE ==="<<endl<<endl;
+                    archivoEspecialidad.listarPorNombre();
+                    cout<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+                    }
         break;
 
         case 6:
+            rlutil::cls();
+            cout<<"LISTAR O. SOCIALES";
+        break;
+
+        case 7:
             rlutil::cls();
             cout<<"LISTAR FACTURAS";
         break;

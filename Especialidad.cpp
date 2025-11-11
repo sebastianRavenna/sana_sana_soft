@@ -30,7 +30,7 @@ _estado=true;
 
 }
 void Especialidad::mostrar(){
-cout << "Especialidad: " << getCodEspecialidad() << endl;
+cout << "Cod. Especialidad: " << getCodEspecialidad() << endl;
 cout << "Descripcion: " << getDescripcion() << endl;
 cout << "Valor de la consulta: " << getValorConsulta() << endl;
 cout << "Estado: " << (_estado ? "Activo" : "Inactivo") << endl;

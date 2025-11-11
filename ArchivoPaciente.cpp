@@ -259,3 +259,65 @@ fclose(pPaciente);
 
 return true;
 }*/
+
+
+int ArchivoPaciente::contarRegistros(){
+    FILE* pPaciente = fopen(_nombreArchivo.c_str(), "rb");
+    if(pPaciente == NULL){
+        return 0;
+    }
+    fseek(pPaciente, 0, SEEK_END);
+    int cantidadRegistros = ftell(pPaciente) / tamanioRegistro;
+    fclose(pPaciente);
+    return cantidadRegistros;
+}
+
+
+bool ArchivoPaciente::listarTodoPorApellido(){
+    int tam = contarRegistros();
+    if(tam == 0){
+        cout<<"No hay registros para listar"<<endl<<endl;
+        return true;
+    }
+    //necesitamos si o si un vector dinamico para poder ordenar
+    Paciente *vectorPacientes;
+    vectorPacientes = new Paciente[tam];
+
+    Paciente pac;
+    FILE* pEspecialidad = fopen(_nombreArchivo.c_str(), "rb");
+    if(pEspecialidad == NULL){
+        cout<<"Error en el Archivo"<<endl;
+        delete[] vectorPacientes;
+        return false;
+    }
+    int i=0;
+    while(fread(&pac, tamanioRegistro, 1, pEspecialidad)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
+        vectorPacientes[i] = pac;
+        i++;
+    }
+    fclose(pEspecialidad);
+
+    for(int i=0; i<tam - 1; i++ ){ //aca va tam-1, porque tomamos un valor del vector y lo comparamos con el siguiente para ver cual es el menor. Si el vector llega a su ultimo elemento, no va a tener un "siguiente" contra quien compararse y por eso va a dar error. Por eso, la iteracion solo llega hasta el penultimo valor del vector
+        int indexmenor = i;
+
+        for(int j=i+1; j<tam; j++){ // aca va j=i+1, porque es la manera de "llamar" al valor siguiente de i para poder hacer la comparacion. Tambien va j<tam, porque necesita llegar al ultimo valor del vector para compararlo con i (que llega hasta el penultimo valor del vector)
+            string nombreJ = vectorPacientes[j].getApellido();
+            string nombreMenor = vectorPacientes[indexmenor].getApellido();
+
+            if(nombreJ<nombreMenor){
+                indexmenor = j;
+            }
+        }
+        Paciente pacAux = vectorPacientes[i];
+        vectorPacientes[i] = vectorPacientes[indexmenor];
+        vectorPacientes[indexmenor] = pacAux;
+    }
+    for(int i=0; i<tam; i++){
+        vectorPacientes[i].mostrar();
+        cout<<"------------------------------"<<endl;
+        cout<<endl;
+    }
+    delete[] vectorPacientes;
+    return true;
+}
+

@@ -14,6 +14,8 @@ class ArchivoEspecialidad
         int contarRegistros();
         bool bajaLogica(int codEspecialidad);
         bool altaLogica(int codEspecialidad);
+        bool listarEspecialidad(); //Listar por ID
+        bool listarPorNombre(); // Listar por nombre, de A a Z
 
 
     private:

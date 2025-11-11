@@ -13,9 +13,11 @@ class ArchivoPaciente
         bool modificarRegistro(const std::string _idPaciente, int pos2);//Modificar Paciente
         bool cambioEstado(const std::string _idPaciente, int pos2);//Baja Paciente
         bool listarPacientes();
-/*
+        bool listarTodoPorApellido();
+
+
         int contarRegistros();
-*/
+
   private:
         std::string _nombreArchivo;
         int tamanioRegistro;

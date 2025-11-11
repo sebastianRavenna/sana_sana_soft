@@ -55,6 +55,6 @@ void Paciente::cargar(){
 void Paciente::mostrar(){
     cout << "Id Paciente: " << getIdPaciente() << endl;
     Persona::mostrar();
-    cout << "Obra Social: " << getIdObraSocial() << endl;
-    cout <<"======================" << endl;
+    cout << "Obra Social: " << getIdObraSocial() << endl<<endl;
+    cout <<"======================" << endl<<endl;
 }

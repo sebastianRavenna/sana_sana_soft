@@ -16,6 +16,8 @@ class ArchivoHistoriaClinica{
 
         int CantidadRegistros();
         bool abmLogico(std::string &dniPacienteBuscado);
+        bool listarPorFecha(); // lista Historias Clinicas de mas antiguo a mas reciente
+        bool listarPorDNI(); // lista Historias Clinicas de menor a mayor
 
     private:
         std::string _nombreArchivo;

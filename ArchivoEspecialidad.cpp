@@ -1,6 +1,7 @@
 #include <string>
 #include "ArchivoEspecialidad.h"
 #include<iostream>
+#include "Especialidad.h"
 using namespace std;
 
 ArchivoEspecialidad::ArchivoEspecialidad(const string &nombreArchivo){
@@ -124,3 +125,68 @@ int ArchivoEspecialidad::contarRegistros(){
     fclose(pEspecialidad);
     return cantidadRegistros;
 }
+
+bool ArchivoEspecialidad::listarEspecialidad(){
+    Especialidad obj;
+    FILE* pEspecialidad=fopen(_nombreArchivo.c_str(), "rb");
+    if(pEspecialidad == NULL){
+        cout<<"Error en el Archivo"<<endl;
+        return false;
+    }
+    while(fread(&obj, tamanioRegistro, 1, pEspecialidad)==1){
+        obj.mostrar();
+        cout<<"------------------------------"<<endl;
+        cout<<endl;
+    }
+    fclose(pEspecialidad);
+    return true;
+}
+
+bool ArchivoEspecialidad::listarPorNombre(){
+    int tam = contarRegistros();
+    if(tam == 0){
+        cout<<"No hay registros para listar"<<endl<<endl;
+        return true;
+    }
+    //necesitamos si o si un vector dinamico para poder ordenar
+    Especialidad *vectorEspecialidad;
+    vectorEspecialidad = new Especialidad[tam];
+
+    Especialidad obj;
+    FILE* pEspecialidad = fopen(_nombreArchivo.c_str(), "rb");
+    if(pEspecialidad == NULL){
+        cout<<"Error en el Archivo"<<endl;
+        delete[] vectorEspecialidad;
+        return false;
+    }
+    int i=0;
+    while(fread(&obj, tamanioRegistro, 1, pEspecialidad)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
+        vectorEspecialidad[i] = obj;
+        i++;
+    }
+    fclose(pEspecialidad);
+
+    for(int i=0; i<tam - 1; i++ ){ //aca va tam-1, porque tomamos un valor del vector y lo comparamos con el siguiente para ver cual es el menor. Si el vector llega a su ultimo elemento, no va a tener un "siguiente" contra quien compararse y por eso va a dar error. Por eso, la iteracion solo llega hasta el penultimo valor del vector
+        int indexmenor = i;
+
+        for(int j=i+1; j<tam; j++){ // aca va j=i+1, porque es la manera de "llamar" al valor siguiente de i para poder hacer la comparacion. Tambien va j<tam, porque necesita llegar al ultimo valor del vector para compararlo con i (que llega hasta el penultimo valor del vector)
+            string nombreJ = vectorEspecialidad[j].getDescripcion();
+            string nombreMenor = vectorEspecialidad[indexmenor].getDescripcion();
+
+            if(nombreJ<nombreMenor){
+                indexmenor = j;
+            }
+        }
+        Especialidad objAux = vectorEspecialidad[i];
+        vectorEspecialidad[i] = vectorEspecialidad[indexmenor];
+        vectorEspecialidad[indexmenor] = objAux;
+    }
+    for(int i=0; i<tam; i++){
+        vectorEspecialidad[i].mostrar();
+        cout<<"------------------------------"<<endl;
+        cout<<endl;
+    }
+    delete[] vectorEspecialidad;
+    return true;
+}
+
