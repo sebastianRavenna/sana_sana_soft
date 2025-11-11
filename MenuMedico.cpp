@@ -5,6 +5,7 @@
 #include "Medico.h"
 #include "ArchivoMedico.h"
 #include "Funciones.h"
+#include "MenuAgenda.h"
 
 using namespace std;
 
@@ -103,7 +104,7 @@ do{
 
         case 5:
             rlutil::cls();
-            cout<<"AGENDA";
+            menuAgenda();
         break;
 
         case 6:

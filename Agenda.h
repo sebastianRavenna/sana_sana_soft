@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Fecha.h"
 #include "Hora.h"
 
@@ -6,9 +7,10 @@ class Agenda
 {
     public:
         Agenda();
-        Agenda(int idAgenda,int idMedico,int codEsp,Fecha fecha, Hora hora);
+        Agenda(const std::string &idMedico,int codEsp,Fecha fecha, Hora hora);
+
         int getIdAgenda();
-        int getIdMedico();
+        std::string getIdMedico() const;
         int getCodEspecialidad();
         Fecha getFechaTurno();
         Hora getHoraTurno();
@@ -16,22 +18,21 @@ class Agenda
         bool getEstado();
 
         void setIdAgenda(int idAgenda);
-        void setIdMedico(int idMedico);
+        void setIdMedico(const std::string &idMedico);
         void setCodEspecialidad(int codEspecilidad);
         void setFechaTurno(Fecha fechaturno);
         void setHoraTurno(Hora hora);
-        void setAsginado(bool asignado);
+        void setAsignado(bool asignado);
         void setEstado(bool estado);
 
         void cargarAgenda();
         void mostrarAgenda();
 
-    protected:
-
     private:
-        int _idAgenda,_idMedico,_codEspecialidad;
-        Fecha fechaTurno;
-        Hora horaTurno;
+        int _idAgenda,_codEspecialidad;
+        char _idMedico[15];
+        Fecha _fechaTurno;
+        Hora _horaTurno;
         bool _asignado,_estado;
 };
 

@@ -22,8 +22,8 @@ void Hora::Cargar(){
         cin>>_minuto;
         if (_hora<1||_hora>24){
         cout<<"Indique una hora V lida entre 01 y 24"<<endl;
-        }else if (_minuto<1||_minuto>60){
-        cout<<"Indique minutos V lidos entre 1 y 60"<<endl;
+        }else if (_minuto<0||_minuto>60){
+        cout<<"Indique minutos V lidos entre 00 y 60"<<endl;
         } else horaValida=true;
         if(!horaValida) cout<<"Intente nuevamente: "<<endl;
     }
@@ -48,5 +48,8 @@ std::string Hora::toString(){
     return std::to_string(_hora) + ":" + std::to_string(_minuto);
 }
 void Hora::Mostrar(){
-        cout<<_hora<<":"<<_minuto<<endl;
+    if(_hora < 10) cout << "0";
+    cout << _hora << ":";
+    if(_minuto < 10) cout << "0";
+    cout << _minuto << endl;
     }

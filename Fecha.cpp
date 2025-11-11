@@ -109,14 +109,15 @@ void Fecha::setAnio(int anio){
 std::string Fecha::toString(){
     return std::to_string(_dia) + "/" + std::to_string(_mes) + "/" + std::to_string(_anio);
 }
+
 void Fecha::Mostrar(){
         cout<<_dia<<"/"<<_mes<<"/"<<_anio<<endl;
-    }
+}
 
 bool Fecha::verificarFecha(){
     Fecha hoy;
     hoy.fechaActual();
-if (_anio > hoy.getAnio() ||
+    if (_anio > hoy.getAnio() ||
        (_anio == hoy.getAnio() && _mes > hoy.getMes()) ||
        (_anio == hoy.getAnio() && _mes == hoy.getMes() && _dia > hoy.getDia())){
             cout<<endl;
@@ -127,5 +128,51 @@ if (_anio > hoy.getAnio() ||
     else{
         return true;
     }
+}
 
+bool Fecha::esIgual(Fecha fecha2) {
+    return (_dia == fecha2.getDia() &&
+            _mes == fecha2.getMes() &&
+            _anio == fecha2.getAnio());
+}
+
+bool Fecha::esIgualOMenor(Fecha fecha2){
+    if(_anio<fecha2.getAnio())return true;
+    if(_anio>fecha2.getAnio())return false;
+
+    if(_mes<fecha2.getMes())return true;
+    if(_mes>fecha2.getMes())return false;
+
+    if(_dia<=fecha2.getDia())return true;
+    if(_dia>fecha2.getDia())return false;
+}
+
+Fecha Fecha::sumarUnDia() {
+    int nuevoDia = _dia + 1;
+    int nuevoMes = _mes;
+    int nuevoAnio = _anio;
+
+    while (nuevoDia > diasEnMes(nuevoMes, nuevoAnio)) {
+        nuevoDia = 1;
+        nuevoMes++;
+
+        // Si me paso del a¤o
+        if (nuevoMes > 12) {
+            nuevoMes = 1;
+            nuevoAnio++;
+        }
+    }
+
+    return Fecha(nuevoDia, nuevoMes, nuevoAnio);
+}
+
+int Fecha::getDiaSemana() {
+    tm fecha = {};
+    fecha.tm_mday = _dia;
+    fecha.tm_mon = _mes - 1;
+    fecha.tm_year = _anio - 1900;
+
+    mktime(&fecha);
+
+    return fecha.tm_wday;
 }
