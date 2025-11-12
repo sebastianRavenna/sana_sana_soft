@@ -117,6 +117,7 @@ _estado=true;
 void Turno::mostrarTurno(){
 
    cout << "ID Turno: " << _idTurno << endl;
+   cout << "ID Agenda: " << _idAgenda << endl;
     cout << "ID Paciente: " << _idPaciente << endl;
     cout << "ID Medico: " << _idMedico << endl;
     cout << "Cod. Especialidad: " << _codEspecialidad << endl;

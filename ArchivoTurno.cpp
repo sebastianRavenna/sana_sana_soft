@@ -2,6 +2,7 @@
 #include <string>
 #include "ArchivoAgenda.h"
 #include "ArchivoTurno.h"
+#include "Agenda.h"
 #include "rlutil.h"
 
 using namespace std;
@@ -164,7 +165,6 @@ bool ArchivoTurno::cancelarTurno(int idTurno){
         cout << "Turno no encontrado" << endl;
         return false;
     }
-
     ArchivoAgenda arcAgenda;
     Turno turno = leerRegistro(pos2);
     turno.mostrarTurno();
@@ -176,6 +176,7 @@ bool ArchivoTurno::cancelarTurno(int idTurno){
 
     if(confirmar){
         turno.setEstado(false);
+
         FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb+");
         if (pArchivo==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -186,15 +187,21 @@ bool ArchivoTurno::cancelarTurno(int idTurno){
         fclose(pArchivo);
 
         int posAgenda = arcAgenda.buscarRegistro(turno.getIdAgenda());
-        FILE* pArchivoAgenda=fopen(_nombreArchivo.c_str(), "rb+");
+        Agenda agenda = arcAgenda.leerRegistro(posAgenda);
+        agenda.setAsignado(false);
+
+        FILE* pArchivoAgenda=fopen("agenda.dat", "rb+");
         if (pArchivoAgenda==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
             return false;
         }
-        fseek(pArchivoAgenda, pos2 * tamanioRegistro, 0);
-        fwrite(&turno, tamanioRegistro, 1, pArchivoAgenda);
+
+
+        fseek(pArchivoAgenda, posAgenda * sizeof(Agenda), 0);
+        fwrite(&agenda, sizeof(Agenda), 1, pArchivoAgenda);
         fclose(pArchivoAgenda);
         cout << "Turno cancelado" << endl;
+        agenda.mostrarAgenda();
     }
     return true;
 }
