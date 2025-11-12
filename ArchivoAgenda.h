@@ -3,7 +3,6 @@
 #include "Agenda.h"
 #include "Hora.h"
 #include "Fecha.h"
-#include "ArchivoTurno.h"
 
 class ArchivoAgenda
 {
@@ -12,24 +11,17 @@ class ArchivoAgenda
         bool escribirRegistro (Agenda agenda);
         int buscarRegistro(int idAgenda);
         Agenda leerRegistro(int tamRegistro);
-        //hbool modificarRegistro(Agenda agenda, int pos2);
+        bool modificarRegistro(Agenda agenda, int pos2);
+        bool cambioEstado(const std::string _idPaciente, int pos2);
         int contarRegistros();
-
-        bool validarIdMedico(const std::string &idMedico);
-        std::string obtenerDescripcionEspecialidad(int codEspecialidad);
-        std::string obtenerNombreMedico(const std::string &idMedico);
 
         void generarAgenda(const std::string &idMedico, int codEspecialidad,
                            Fecha fecha, Hora horaInicio, Hora horaFin);
-        void generarAgendaRango(const std::string &idMedico, int codEspecialidad,
-                                Fecha fechaDesde, Fecha fechaHasta, Hora horaInicio,
-                                Hora horaFin, bool diasSemana[7]);
-        bool cambioEstado(const std::string &idMedico, Fecha fechaDesde, Fecha fechaHasta);
+        void generarAgendaRango(const std::string &idMedico, int codEspecialidad, Fecha fechaDesde, Fecha fechaHasta, Hora horaInicio, Hora horaFin, bool diasSemana[7]);
 
         bool listarAgendaCompleta();
         bool listarAgendaPorFecha(Fecha fecha);
-        bool listarAgendaPorRangoFecha(Fecha fechaDesde, Fecha fechaHasta);
-        bool listarAgendaPorMedicoRangoFecha(const std::string &idMedico,Fecha fechaDesde, Fecha fechaHasta);
+
 
   private:
         std::string _nombreArchivo;

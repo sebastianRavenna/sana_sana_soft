@@ -4,6 +4,8 @@
 #include "Medico.h"
 #include "Funciones.h"
 #include "rlutil.h"
+#include "MenuMedico.h"
+#include "ArchivoEspecialidad.h"
 using namespace std;
 
 
@@ -24,6 +26,7 @@ bool ArchivoMedico::guardarMedico(const Medico &reg){
     fwrite(&reg, sizeof(Medico), 1, pMedico);
 
     cout<<"Guardado exitoso"<<endl;
+
     fclose(pMedico);
     return true;
 }
@@ -56,6 +59,7 @@ Medico reg;
 FILE *pMedico;
 pMedico=fopen(_nombreArchivo.c_str(),"rb");
 if(pMedico==NULL){
+    cout<<"ERROR EN EL ARCHIVO"<<endl;
     return -2;
 }
 
@@ -103,6 +107,9 @@ return true;
 
 bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
     Medico reg;
+    ArchivoMedico archivoMedico;
+    ArchivoEspecialidad archivoEspecialidad;
+
     FILE* pMedico=fopen(_nombreArchivo.c_str(), "rb+");
         if (pMedico==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -150,15 +157,28 @@ bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
     switch(opcionModificar) {
         case 1:{
             cout << "Ingrese nuevo DNI: ";
-            reg.setDNI(cargarCadena());
+
+            string idMedico=cargarCadena();
+            int posBuscar = archivoMedico.buscarRegistro(idMedico);
+            if(posBuscar<0){
+            reg.setDNI(idMedico);
             reg.setIdPersona(reg.getDNI());
             cout << endl;
 
             string idMed = "M-" + reg.getDNI();
             reg.setIdMedico(idMed);
             cout << "DNI modificado exitosamente." << endl;
-            break;
+            cin.get();
         }
+        else{
+                cout << endl;
+                cout<<"El DNI ingresado pertenece a un medico ya registrado."<<endl<<endl;
+                cout<<"Presione ENTER para continuar...";
+                cin.get();
+        }
+        break;
+        }
+
         case 2:
             cout << "Ingrese nuevo Nombre: ";
             reg.setNombre(cargarCadena());
@@ -189,47 +209,89 @@ bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
             cout << "Telefono modificado exitosamente." << endl;
             break;
 
-        case 7:
+        case 7:{
             cout << "Ingrese nuevo Sexo (M/F): ";
-            reg.setSexo(cargarCadena());
+            string sexo = cargarCadena();
+            while(sexo != "M" && sexo!= "F"){
+                cout<<endl;
+                cout<<"El sexo ingresado no es valido. Por favor, ingrese M o F"<<endl;
+                cout << "Sexo (M/F): ";
+                sexo = cargarCadena();
+            }
+                reg.setSexo(sexo);
             cout << "Sexo modificado exitosamente." << endl;
+            cin.get();
             break;
+            }
 
         case 8: {
-            cout << "Ingrese nueva Fecha de Ingreso: " << endl;
-            nuevaFecha.Cargar();
+            cout << "Ingrese nueva Fecha de Nacimiento: " << endl;
+            bool esValido;
+            do{
+                nuevaFecha.Cargar();
+                esValido = nuevaFecha.verificarFecha();
+                }
+            while(esValido == false);
             reg.setFechaNac(nuevaFecha);
+            cout << endl;
             cout << "Fecha de Nacimiento modificada exitosamente." << endl;
+            cin.ignore();
+            cin.get();
             break;
         }
 
         case 9: {
-            Fecha nuevaFecha;
+            Fecha nuevaFecha2;
             cout << "Ingrese nueva Fecha de Ingreso: " << endl;
-            nuevaFecha.Cargar();
-            reg.setFechaIngreso(nuevaFecha);
+
+            bool esValido2;
+            do{
+                nuevaFecha2.Cargar();
+                esValido2 = nuevaFecha2.verificarFecha();
+                }
+            while(esValido2 == false);
+            reg.setFechaIngreso(nuevaFecha2);
+            cout << endl;
             cout << "Fecha de Ingreso modificada exitosamente." << endl;
+            cin.ignore();
+            cin.get();
             break;
         }
 
         case 10:
-            cout << "Ingrese nuevo Codigo de Especialidad: " << endl;
+            cout << "Ingrese nuevo Codigo de Especialidad: ";
             int codEspecialidad;
             cin >> codEspecialidad;
+
+            while(archivoEspecialidad.buscarRegistro(codEspecialidad) < 0){
+                cout<<"El codigo de especialidad ingresado no existe. Por favor, vuelva a intentarlo..."<<endl;
+                cout << "Cod de Especialidad: ";
+                cin >> codEspecialidad;
+            }
             reg.setCodEspecialidad(codEspecialidad);
             cout << "Codigo de Especialidad modificado exitosamente." << endl;
+            cin.ignore();
+            cin.get();
             break;
 
         case 11:
-            cout << "Ingrese nuevo numero de Matricula: " << endl;
+            cout << "Ingrese nuevo numero de Matricula: ";
             int matricula;
             cin >> matricula;
+
+            while(archivoMedico.buscarPorMatricula(matricula) >= 0){
+                cout<<"La matricula ingresada ya esta registrada. Por favor, vuelva a intentarlo..."<<endl;
+                cout << "Matricula: ";
+                cin >> matricula;
+            }
             reg.setMatricula(matricula);
             cout << "Matricula modificada exitosamente." << endl;
+            cin.ignore();
+            cin.get();
             break;
 
         case 0:
-            cout << "Volviendo al menu anterior..." << endl;
+           // menuMedico();
             break;
 
         default:
@@ -326,4 +388,26 @@ bool ArchivoMedico::cambioEstado(const std::string _idMedicp, int pos2){
 
     fclose(pMedico);
     return reg.getEstado();
+}
+
+int ArchivoMedico::buscarPorMatricula(int matricula){
+Medico reg;
+
+FILE *pMedico;
+pMedico=fopen(_nombreArchivo.c_str(),"rb");
+if(pMedico==NULL){
+    cout<<"ERROR EN EL ARCHIVO"<<endl;
+    return -2;
+}
+
+    int pos=0;
+    while(fread(&reg, tamanioRegistro,1,pMedico)==1){
+       if(reg.getMatricula()== matricula){
+            return pos;
+       }
+       pos++;
+    }
+
+    fclose(pMedico);
+    return -1;
 }

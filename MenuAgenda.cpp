@@ -3,7 +3,6 @@
 #include "rlutil.h"
 #include "menuAgenda.h"
 #include "ArchivoAgenda.h"
-#include "Funciones.h"
 #include "Fecha.h"
 #include "Hora.h"
 using namespace std;
@@ -32,7 +31,9 @@ do{
     cout<<margenMenu<<"||                            ||"<<endl;
     cout<<margenMenu<<"||  2 - BUSCAR AGENDA         ||"<<endl;
     cout<<margenMenu<<"||                            ||"<<endl;
-    cout<<margenMenu<<"||  3 - SUSPENDER AGENDA      ||"<<endl;
+    cout<<margenMenu<<"||  3 - MODIFICAR AGENDA      ||"<<endl;
+    cout<<margenMenu<<"||                            ||"<<endl;
+    cout<<margenMenu<<"||  4 - SUSPENDER AGENDA      ||"<<endl;
     cout<<margenMenu<<"||============================||"<<endl;
     cout<<margenMenu<<"||  0 - VOLVER AL M. INICIAL  ||"<<endl;
     cout<<margenMenu<<" =============================="<<endl<<endl;
@@ -40,7 +41,7 @@ do{
     cout<<margenMenu<<"Ingrese la opcion deseada: ";
     cin>> numeroInicio;
 
-    while(numeroInicio>3||numeroInicio<0){
+    while(numeroInicio>4||numeroInicio<0){
         cout<<margenMenu<<"Numero incorrecto"<<endl;
         cout<<margenMenu<<"Ingrese la opcion deseada: ";
         cin>> numeroInicio;
@@ -56,7 +57,7 @@ do{
             cout<<endl;
             //cout << "Agenda: "<<agenda.getNombre()<<" "<<agenda.getApellido()<<endl<<endl;
             cout << "====================================" << endl;
-            cout << "     SELECCIONE COMO DESEA CREAR" << endl;
+            cout << "     SELECCIONE QUE MODIFICAR" << endl;
             cout << "====================================" << endl;
             cout << "1. Crear Agenda de un solo Dia" << endl;
             cout << "2. Crear Agenda en un rango de Dias" << endl;
@@ -105,19 +106,17 @@ do{
             cout<<endl;
 
             cout << "=====================================" << endl;
-            cout << "      SELECCIONE COMO DESEA BUSCAR" << endl;
+            cout << "      SELECCIONE QUE MODIFICAR" << endl;
             cout << "=====================================" << endl;
             cout << "1. Buscar Agenda Completa" << endl;
-            cout << "2. Buscar Agenda en un dia especifico" << endl;
-            cout << "3. Buscar Agenda en un rango de Dias" << endl;
-            cout << "4. Buscar Agenda por Medico" << endl;
+            cout << "2. Buscar Agenda en un rango de Dias" << endl;
             cout << "0. Volver" << endl;
             cout << "=====================================" << endl;
             cout << "Opcion: ";
             cin >> opcionBuscarAgenda;
             cin.ignore();
 
-            while(opcionBuscarAgenda>4||opcionBuscarAgenda<0){
+            while(opcionBuscarAgenda>2||opcionBuscarAgenda<0){
                 cout<<"Numero incorrecto"<<endl;
                 cout<<"Ingrese la opcion deseada: ";
                 cin>> opcionBuscarAgenda;
@@ -139,17 +138,8 @@ do{
                     arcAgenda.listarAgendaPorFecha(fecha);
                     break;
                     }
-                case 3:{
-                    rlutil::cls();
-                    buscarAgendaRango();
-                    break;
-                    }
-                case 4:{
-                    rlutil::cls();
-                    buscarAgendaPorMedicoRangoFecha();
-                    break;
-                    }
                 case 0:
+                    cout << "Volviendo al menu anterior..." << endl;
                     break;
 
                 default:
@@ -163,12 +153,21 @@ do{
 }
         case 3:
             rlutil::cls();
-            suspenderAgenda();
+            cout<<"MODIFICAR AGENDA";
+        break;
+
+        case 4:
+            rlutil::cls();
+            cout<<"SUSPENDER AGENDA";
         break;
 
         case 0:
+            rlutil::cls();
+            cout<<"Volviendo al Menu Inicial";
+
         return;
     }
+    rlutil::anykey();
     }while (numeroInicio!=0);
 
 }
@@ -186,29 +185,20 @@ void crearAgendaDia(){
     cout << "ID del Medico: ";
     cin >> idMedico;
 
-    if(arcAgenda.validarIdMedico(idMedico)){
+    cout << "Codigo de Especialidad: ";
+    cin >> codEspecialidad;
 
-        string nombreMedico = "M-" + idMedico;
-        cout << "Medico: " << arcAgenda.obtenerNombreMedico(nombreMedico) << endl;
+    cout << "\nFecha de atencion:" << endl;
+    fecha.Cargar();
 
-        cout << "Codigo de Especialidad: ";
-        cin >> codEspecialidad;
+    cout << "\nHora de INICIO de atencion:" << endl;
+    horaInicio.Cargar();
 
-        cout << "\nFecha de atencion:" << endl;
-        fecha.Cargar();
+    cout << "\nHora de FIN de atencion:" << endl;
+    horaFin.Cargar();
 
-        cout << "\nHora de INICIO de atencion:" << endl;
-        horaInicio.Cargar();
-
-        cout << "\nHora de FIN de atencion:" << endl;
-        horaFin.Cargar();
-
-        arcAgenda.ArchivoAgenda::generarAgenda(idMedico, codEspecialidad, fecha,
-                                               horaInicio, horaFin);
-        }else {
-            cout << "El medico con DNI " << idMedico << " no existe" << endl;
-            system("pause");
-        }
+    arcAgenda.ArchivoAgenda::generarAgenda(idMedico, codEspecialidad, fecha,
+                                           horaInicio, horaFin);
 }
 
 void crearAgendaRango() {
@@ -264,58 +254,4 @@ void crearAgendaRango() {
     system("pause");
 }
 
-void buscarAgendaRango() {
-    Fecha fechaDesde, fechaHasta;
-    ArchivoAgenda arcAgenda;
-
-    cout << "\n=== INDICAR RANGO ===" << endl;
-
-    cout << "\nFecha DESDE:" << endl;
-    fechaDesde.Cargar();
-
-    cout << "\nFecha HASTA:" << endl;
-    fechaHasta.Cargar();
-
-    arcAgenda.listarAgendaPorRangoFecha(fechaDesde, fechaHasta);
-}
-
-void suspenderAgenda() {
-    Fecha fechaDesde, fechaHasta;
-    string idMedico;
-    ArchivoAgenda arcAgenda;
-
-    cout << "\n=== INDICAR MEDICO Y RANGO DE FECHAS ===" << endl;
-
-    cout << "\nID MEDICO:" << endl;
-    cin>>idMedico;
-    cin.ignore();
-
-    cout << "\nFecha DESDE:" << endl;
-    fechaDesde.Cargar();
-
-    cout << "\nFecha HASTA:" << endl;
-    fechaHasta.Cargar();
-
-    arcAgenda.cambioEstado(idMedico, fechaDesde, fechaHasta);
-}
-
-void buscarAgendaPorMedicoRangoFecha(){
-    Fecha fechaDesde, fechaHasta;
-    string idMedico;
-    ArchivoAgenda arcAgenda;
-
-    cout << "\n=== INDICAR MEDICO Y RANGO DE FECHAS ===" << endl;
-
-    cout << "\nID MEDICO:" << endl;
-    cin>>idMedico;
-    cin.ignore();
-
-    cout << "\nFecha DESDE:" << endl;
-    fechaDesde.Cargar();
-
-    cout << "\nFecha HASTA:" << endl;
-    fechaHasta.Cargar();
-
-    arcAgenda.listarAgendaPorMedicoRangoFecha(idMedico, fechaDesde, fechaHasta);
-}
 

@@ -1,8 +1,5 @@
 #include <iostream>
 #include <string>
-#include "Paciente.h"
-#include "Medico.h"
-#include "Especialidad.h"
 #include "ArchivoAgenda.h"
 #include "ArchivoTurno.h"
 #include "Agenda.h"
@@ -130,6 +127,7 @@ bool ArchivoTurno::modificarRegistro(int idTurno, int pos2){
         }
 
         case 0:
+            cout << "Volviendo al menu anterior..." << endl;
             break;
 
         default:
@@ -146,6 +144,7 @@ bool ArchivoTurno::modificarRegistro(int idTurno, int pos2){
     fclose(pArchivo);
     return true;
 }
+
 
 int ArchivoTurno::contarRegistros(){
     FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
@@ -314,6 +313,7 @@ void ArchivoTurno::solicitarTurno(const string &idMedico, const string &idPacien
     fclose(pArchivo);
 }
 
+
 bool ArchivoTurno::listarTodosLosTurnos(){
     Turno turno;
     FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
@@ -381,60 +381,3 @@ bool ArchivoTurno::listarTurnosPorPaciente(const string &idPaciente){
     return true;
 }
 
-bool validarPacienteExiste(const std::string &dniPaciente){
-    FILE* pArchivo = fopen("pacientes.dat", "rb");
-    if (pArchivo==NULL){
-        cout<<"ERROR EN EL ARCHIVO"<<endl;
-        return false;
-    }
-
-    std::string idBuscado = "P-" + dniPaciente;
-    Paciente paciente;
-
-    while(fread(&paciente, sizeof(Paciente), 1, pArchivo) == 1) {
-        if(paciente.getIdPaciente() == idBuscado && paciente.getEstado()) {
-            fclose(pArchivo);
-            return true;
-        }
-    }
-    fclose(pArchivo);
-    return false;
-}
-
-bool validarMedicoExiste(const std::string &dniMedico){
-    FILE* pArchivo = fopen("medico.dat", "rb");
-    if (pArchivo==NULL){
-        cout<<"ERROR EN EL ARCHIVO"<<endl;
-        return false;
-    }
-
-    std::string idBuscado = "M-" + dniMedico;
-    Medico medico;
-
-    while(fread(&medico, sizeof(Medico), 1, pArchivo) == 1) {
-        if(medico.getIdMedico() == idBuscado && medico.getEstado()) {
-            fclose(pArchivo);
-            return true;
-        }
-    }
-    fclose(pArchivo);
-    return false;
-}
-
-std::string obtenerDescripcionEspecialidad(int codEspecialidad){
-    FILE* pArchivo = fopen("especialidad.dat", "rb");
-    if (pArchivo==NULL){
-        cout<<"ERROR EN EL ARCHIVO"<<endl;
-
-    }
-
-    Especialidad esp;
-    while(fread(&esp, sizeof(Especialidad), 1, pArchivo) == 1) {
-        if(esp.getCodEspecialidad() == codEspecialidad) {
-            fclose(pArchivo);
-            return esp.getDescripcion();
-        }
-    }
-    fclose(pArchivo);
-    return "Especialidad no encontrada";
-}

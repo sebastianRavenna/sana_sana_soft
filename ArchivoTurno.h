@@ -14,10 +14,7 @@ class ArchivoTurno
         bool modificarRegistro(int idTurno, int pos2);
         int contarRegistros();
 
-        bool validarPacienteExiste(const std::string &dniPaciente);
-        bool validarMedicoExiste(const std::string &dniMedico);
-        std::string obtenerDescripcionEspecialidad(int codEspecialidad);
-        std::string obtenerNombreMedico(const std::string &idMedico);
+
 
         void solicitarTurno(const std::string &idMedico, const std::string &idPaciente,
                             Fecha fechaDesde, Fecha fechaHasta);

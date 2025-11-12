@@ -58,9 +58,21 @@ do{
         case 1:
             cout << endl;
             rlutil::cls();
-            cout << "\n=== ALTA DE MEDICO ===" << endl;
-            medico.cargar();
-            cout << endl;
+            cout << "\n=== ALTA DE MEDICO ===" << endl<<endl;
+            cout<<"DNI: ";
+            idMed=cargarCadena();
+            posBuscar = archivoMedico.buscarRegistro(idMed);
+            if(posBuscar<0){
+                medico.cargar(idMed);
+                archivoMedico.guardarMedico(medico);
+                cout << endl;
+            }
+            else{
+                cout << endl;
+                cout<<"El DNI ingresado pertenece a un medico ya registrado."<<endl<<endl;
+                cout<<"Presione ENTER para continuar...";
+            }
+
         break;
 
         case 2:
@@ -73,8 +85,12 @@ do{
                 medico=archivoMedico.leerRegistro(posBuscar);
                 medico.mostrar();
             }
-            else cout << "Medico no encontrado." << endl;
-            cout << endl;
+            else {
+                cout << "Medico no encontrado." << endl;
+                cout<<endl<<endl;
+                cout<<"Presione ENTER para continuar...";
+            }
+
         break;
 
         case 3:
@@ -85,8 +101,12 @@ do{
             posBuscar=archivoMedico.buscarRegistro(idMed);
             if(posBuscar>=0){
                 archivoMedico.modificarRegistro(idMed,posBuscar);
-            } else cout << "Medico no encontrado." << endl;
-            cout << endl;
+            }
+            else {
+                cout << "Medico no encontrado." << endl;
+                cout<<endl<<endl;
+                cout<<"Presione ENTER para continuar...";
+                }
         break;
 
         case 4:
