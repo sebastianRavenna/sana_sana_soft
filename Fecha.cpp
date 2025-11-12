@@ -130,6 +130,15 @@ bool Fecha::verificarFecha(){
     }
 }
 
+bool Fecha::esMasAntigua(Fecha fecha2){
+    if(_anio < fecha2.getAnio()) return true;
+    if(_anio > fecha2.getAnio()) return false;
+    if(_mes < fecha2.getMes()) return true;
+    if(_mes > fecha2.getMes()) return false;
+    if(_dia < fecha2.getDia()) return true;
+    if(_dia > fecha2.getDia()) return false;
+}
+
 bool Fecha::esIgual(Fecha fecha2) {
     return (_dia == fecha2.getDia() &&
             _mes == fecha2.getMes() &&

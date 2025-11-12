@@ -28,4 +28,5 @@ class Fecha{
     Fecha sumarUnDia();
     int getDiaSemana();
     std::string toString();
+    bool esMasAntigua(Fecha fecha2);
 };
