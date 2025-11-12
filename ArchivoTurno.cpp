@@ -127,6 +127,7 @@ bool ArchivoTurno::modificarRegistro(int idTurno, int pos2){
         }
 
         case 0:
+            cout << "Volviendo al menu anterior..." << endl;
             break;
 
         default:
@@ -143,6 +144,7 @@ bool ArchivoTurno::modificarRegistro(int idTurno, int pos2){
     fclose(pArchivo);
     return true;
 }
+
 
 int ArchivoTurno::contarRegistros(){
     FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
@@ -310,6 +312,7 @@ void ArchivoTurno::solicitarTurno(const string &idMedico, const string &idPacien
     delete[] posicionesAgenda;
     fclose(pArchivo);
 }
+
 
 bool ArchivoTurno::listarTodosLosTurnos(){
     Turno turno;

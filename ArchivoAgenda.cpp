@@ -59,6 +59,133 @@ Agenda ArchivoAgenda::leerRegistro(int pos){
     return agenda;
 }
 
+bool ArchivoAgenda::modificarRegistro(Agenda idAgenda, int pos2){
+    Agenda agenda;
+    FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb+");
+        if (pArchivo==NULL){
+            cout<<"ERROR EN EL ARCHIVO"<<endl;
+            return false;
+    }
+
+    fseek(pArchivo, pos2 * tamanioRegistro, 0);
+    fread(&agenda, tamanioRegistro, 1, pArchivo);
+
+    int opcionModificar=-1;
+    Fecha nuevaFecha;
+    /*do{
+    system("cls");
+    agenda.mostrar();
+    cout<<endl;
+    //cout << "Agenda: "<<agenda.getNombre()<<" "<<agenda.getApellido()<<endl<<endl;
+    cout << "================================" << endl;
+    cout << "   SELECCIONE QUE MODIFICAR" << endl;
+    cout << "================================" << endl;
+    cout << "1. DNI" << endl;
+    cout << "2. Nombre" << endl;
+    cout << "3. Apellido" << endl;
+    cout << "4. Domicilio" << endl;
+    cout << "5. Mail" << endl;
+    cout << "6. Telefono" << endl;
+    cout << "7. Sexo" << endl;
+    cout << "8. Fecha de Nacimiento" << endl;
+    cout << "9. Fecha de Ingreso" << endl;
+    cout << "0. Volver" << endl;
+    cout << "================================" << endl;
+    cout << "Opcion: ";
+    cin >> opcionModificar;
+    cin.ignore();
+
+    while(opcionModificar>9||opcionModificar<0){
+        cout<<"Numero incorrecto"<<endl;
+        cout<<"Ingrese la opcion deseada: ";
+        cin>> opcionModificar;
+        cin.ignore();
+    }
+
+
+    switch(opcionModificar) {
+        case 1:{
+            cout << "Ingrese nuevo DNI: ";
+            agenda.setDNI(cargarCadena());
+            agenda.setIdPersona(agenda.getDNI());
+            cout << endl;
+
+            string idagenda = "P-" + agenda.getDNI();
+            agenda.setIdAgenda(idagenda);
+            cout << "DNI modificado exitosamente." << endl;
+            break;
+        }
+        case 2:
+            cout << "Ingrese nuevo Nombre: ";
+            agenda.setNombre(cargarCadena());
+            cout << "Nombre modificado exitosamente." << endl;
+            break;
+
+        case 3:
+            cout << "Ingrese nuevo Apellido: ";
+            agenda.setApellido(cargarCadena());
+            cout << "Apellido modificado exitosamente." << endl;
+            break;
+
+        case 4:
+            cout << "Ingrese nuevo Domicilio: ";
+            agenda.setDomicilio(cargarCadena());
+            cout << "Domicilio modificado exitosamente." << endl;
+            break;
+
+        case 5:
+            cout << "Ingrese nuevo Mail: ";
+            agenda.setMail(cargarCadena());
+            cout << "Mail modificado exitosamente." << endl;
+            break;
+
+        case 6:
+            cout << "Ingrese nuevo Telefono: ";
+            agenda.setTelefono(cargarCadena());
+            cout << "Telefono modificado exitosamente." << endl;
+            break;
+
+        case 7:
+            cout << "Ingrese nuevo Sexo (M/F): ";
+            agenda.setSexo(cargarCadena());
+            cout << "Sexo modificado exitosamente." << endl;
+            break;
+
+        case 8: {
+            cout << "Ingrese nueva Fecha de Ingreso: " << endl;
+            nuevaFecha.Cargar();
+            agenda.setFechaNac(nuevaFecha);
+            cout << "Fecha de Nacimiento modificada exitosamente." << endl;
+            break;
+        }
+
+        case 9: {
+            Fecha nuevaFecha;
+            cout << "Ingrese nueva Fecha de Ingreso: " << endl;
+            nuevaFecha.Cargar();
+            agenda.setFechaIngreso(nuevaFecha);
+            cout << "Fecha de Ingreso modificada exitosamente." << endl;
+            break;
+        }
+
+        case 0:
+            cout << "Volviendo al menu anterior..." << endl;
+            break;
+
+        default:
+            cout << "Opcion invalida. Intente nuevamente." << endl;
+            break;
+    }
+
+    }while (opcionModificar!=0);*/
+
+    fseek(pArchivo, pos2 * tamanioRegistro, 0);
+    fwrite(&agenda, tamanioRegistro, 1, pArchivo);
+
+    fclose(pArchivo);
+    return true;
+}
+
 int ArchivoAgenda::contarRegistros(){
     FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
         if (pArchivo==NULL){
@@ -72,44 +199,44 @@ int ArchivoAgenda::contarRegistros(){
     return cantReg;
 }
 
-bool ArchivoAgenda::cambioEstado(const std::string &idMedico, Fecha fechaDesde,
-                                 Fecha fechaHasta ){
+bool ArchivoAgenda::cambioEstado(const std::string _idAgenda, int pos2){
     Agenda agenda;
-
+    bool nuevoEstado;
     FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb+");
         if (pArchivo==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
             return false;
+    }
+
+    fseek(pArchivo, pos2 * tamanioRegistro, 0);
+    fread(&agenda, tamanioRegistro, 1, pArchivo);
+
+
+    int opcCambio;
+    if(agenda.getEstado()==1){
+        cout<<"¨Desea pasar el Agenda a Estado Inactivo? 1.Si - 2.No:";
+        cin>>opcCambio;
+        cin.ignore();
+        if(opcCambio==1){
+            nuevoEstado = false;
+            cout<<"El Agenda fue dado de Baja en el sistema"<<endl;
         }
-
-    int opcCambio, contador=0, posicion=0;
-    cout<<"¨Desea suspender la Agenda en ese rango? 1.Si - 0.No:";
-    cin>>opcCambio;
-    cin.ignore();
-
-    if(opcCambio==1){
-
-        while (fread (&agenda, tamanioRegistro, 1, pArchivo)==1){
-            if(agenda.getIdMedico()==idMedico && fechaDesde.esIgualOMenor(agenda.getFechaTurno()) &&
-                agenda.getFechaTurno().esIgualOMenor(fechaHasta)){
-                agenda.setEstado(false);
-                agenda.setAsignado(true);
-
-                fseek(pArchivo, posicion * tamanioRegistro, 0);
-                fwrite(&agenda, tamanioRegistro, 1, pArchivo);
-
-                fseek(pArchivo, (posicion+1) * tamanioRegistro, 0);
-                contador++;
-                }
-                posicion++;
+    }else{
+        cout<<"¨Desea cambiar el Agenda a Estado Activo? 1.Si - 2.No:";
+        cin>>opcCambio;
+        cin.ignore();
+        if(opcCambio==1){
+            nuevoEstado = true;
+            cout<<"El Agenda fue dado de Alta en el sistema"<<endl;
         }
     }
+    agenda.setEstado(nuevoEstado);
+
+    fseek(pArchivo, pos2 * tamanioRegistro, 0);
+    fwrite(&agenda, tamanioRegistro, 1, pArchivo);
+
     fclose(pArchivo);
-    if (contador>0){
-    cout<<"La Agenda fue Suspendida en el sistema: "<<contador<<endl;
-    system("pause");
-    }
-    return true;
+    return agenda.getEstado();
 }
 
 void ArchivoAgenda::generarAgenda(const std::string &idMedico, int codEspecialidad, Fecha fecha, Hora horaInicio, Hora horaFin){
@@ -192,56 +319,3 @@ bool ArchivoAgenda::listarAgendaPorFecha(Fecha fecha){
     system("pause");
     return true;
 }
-
-bool ArchivoAgenda::listarAgendaPorRangoFecha(Fecha fechaDesde, Fecha fechaHasta){
-    Agenda agenda;
-    FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
-    if (pArchivo==NULL){
-        cout<<"ERROR EN EL ARCHIVO"<<endl;
-        return false;
-    }
-
-    cout << "\n=== AGENDA DEL ";
-    fechaDesde.Mostrar();
-    cout << " AL ";
-    fechaHasta.Mostrar();
-    cout << " ===" << endl;
-
-    while (fread (&agenda, tamanioRegistro, 1, pArchivo)==1){
-        if(fechaDesde.esIgualOMenor(agenda.getFechaTurno()) &&
-            agenda.getFechaTurno().esIgualOMenor(fechaHasta)){
-            agenda.mostrarAgenda();
-        }
-    }
-    fclose(pArchivo);
-    system("pause");
-    return true;
-}
-
-bool ArchivoAgenda::listarAgendaPorMedicoRangoFecha(const std::string &idMedico,Fecha fechaDesde, Fecha fechaHasta){
-    Agenda agenda;
-    FILE* pArchivo=fopen(_nombreArchivo.c_str(), "rb");
-    if (pArchivo==NULL){
-        cout<<"ERROR EN EL ARCHIVO"<<endl;
-        return false;
-    }
-
-    cout << "\n=== AGENDA DEL MEDICO ";
-    agenda.getIdMedico();
-    cout << " DESDE EL ";
-    fechaDesde.Mostrar();
-    cout << " HASTA EL ";
-    fechaHasta.Mostrar();
-    cout << " ===" << endl;
-
-    while (fread (&agenda, tamanioRegistro, 1, pArchivo)==1){
-        if(agenda.getIdMedico()==idMedico && fechaDesde.esIgualOMenor(agenda.getFechaTurno()) &&
-           agenda.getFechaTurno().esIgualOMenor(fechaHasta)){
-            agenda.mostrarAgenda();
-        }
-    }
-    fclose(pArchivo);
-    system("pause");
-    return true;
-}
-
