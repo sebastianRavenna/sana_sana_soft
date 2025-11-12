@@ -32,65 +32,45 @@ setDNI(cargarCadena());
 setIdPersona(getDNI());
 cout << endl;
 */
-cout << "Nombre: ";
+cout << "Nombre: " << endl;
 setNombre(cargarCadena());
 cout << endl;
 
-cout << "Apellido: ";
+cout << "Apellido: " << endl;
 setApellido(cargarCadena());
 cout << endl;
 
 
-cout << "Domicilio: ";
+cout << "Domicilio: " << endl;
 setDomicilio(cargarCadena());
 cout << endl;
 
 
-cout << "Mail: ";
+cout << "Mail: " << endl;
 setMail(cargarCadena());
 cout << endl;
 
-cout << "Telefono: ";
+cout << "Telefono: " << endl;
 setTelefono(cargarCadena());
 cout << endl;
 
-cout << "Sexo (M/F): ";
-string sexo = cargarCadena();
-while(sexo != "M" && sexo!= "F"){
-    cout<<endl;
-    cout<<"El sexo ingresado no es valido. Por favor, ingrese M o F"<<endl;
-    cout << "Sexo (M/F): ";
-    sexo = cargarCadena();
-}
-    setSexo(sexo);
-
+cout << "Sexo (M/F): " << endl;
+setSexo(cargarCadena());
 cout << endl;
 
-
-cout << "Fecha de nacimiento: "<< endl;
-bool esValido;
-do{
-    fechaNac.Cargar();
-    esValido = fechaNac.verificarFecha();
-    }
-while(esValido == false);
-setFechaNac(fechaNac);
+cout << "Fecha de nacimiento: " << endl;
+fechaNac.Cargar();
 cout << endl;
 
-cout << "Fecha de Ingreso: "<< endl;
-bool esValido2;
-do{
-    fechaIngreso.Cargar();
-    esValido2 = fechaIngreso.verificarFecha();
-    }
-while(esValido2 == false);
-setFechaIngreso(fechaIngreso);
+cout << "Fecha de Ingreso: " << endl;
+fechaIngreso.Cargar();
 cout << endl;
 
 _estado=true;
 
 cout.flush();
 }
+
 
 
 void Persona::mostrar() {

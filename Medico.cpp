@@ -3,12 +3,9 @@
 #include "Medico.h"
 #include "Funciones.h"
 #include "ArchivoMedico.h"
-#include "Especialidad.h"
-#include "ArchivoEspecialidad.h"
 using namespace std;
 
 ArchivoMedico archivoMedico;
-ArchivoEspecialidad archivoEspecialidad;
 
 Medico::Medico() : Persona(){
    strcpy (_idMedico,"M-00000000");
@@ -42,48 +39,33 @@ void Medico::setMatricula(int matricula){
     _matricula=matricula;
 }
 
-void Medico::cargar(std::string &idMedico){
-    //cout << "DNI: ";
-    setDNI(idMedico);
+void Medico::cargar(){
+    cout << "DNI: " << endl;
+    setDNI(cargarCadena());
     setIdPersona(getDNI());
     cout << endl;
 
     string idMed = "M-" + getDNI();
     setIdMedico(idMed);
 
-    //if(archivoMedico.buscarRegistro(getDNI())>=0){
-     //   cout << "Ya existe el usuario." << endl;
-    //}
-   // else{
+    if(archivoMedico.buscarRegistro(getDNI())>=0){
+        cout << "Ya existe el usuario." << endl;
+    }
+    else{
     Persona::cargar();
 
-    int codEspecialidad;
-    cout << "Cod de Especialidad: ";
-    cin >> codEspecialidad;
-
-    while(archivoEspecialidad.buscarRegistro(codEspecialidad) < 0){
-        cout<<"El codigo de especialidad ingresado no existe. Por favor, vuelva a intentarlo..."<<endl;
-        cout << "Cod de Especialidad: ";
-        cin >> codEspecialidad;
-    }
-
-    setCodEspecialidad(codEspecialidad);
+    cout << "Cod de Especialidad: " << endl;
+    cin >> _codEspecialidad;
     cin.ignore();
     cout << endl;
 
-    int matricula;
-    cout << "Matricula: ";
-    cin >> matricula;
-    while(archivoMedico.buscarPorMatricula(matricula) >= 0){
-        cout<<"La matricula ingresada ya esta registrada. Por favor, vuelva a intentarlo..."<<endl;
-        cout << "Matricula: ";
-        cin >> matricula;
-    }
-    setMatricula(matricula);
+    cout << "Matricula: " << endl;
+    cin >> _matricula;
     cin.ignore();
     cout << endl;
+archivoMedico.guardarMedico(*this);
 }
-//}
+}
 void Medico::mostrar(){
     cout << "Id Medico: " << getIdMedico() << endl;
     Persona::mostrar();

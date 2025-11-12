@@ -12,7 +12,7 @@ class Medico: public Persona
         void setIdMedico(const std::string &idMedico);
         void setCodEspecialidad(int codEspecialidad);
         void setMatricula(int matricula);
-        void cargar(std::string &idMedico);
+        void cargar();
         void mostrar();
 
 
