@@ -3,6 +3,7 @@
 #include "rlutil.h"
 #include "menuTurno.h"
 #include "ArchivoTurno.h"
+#include "ArchivoAgenda.h"
 #include "Fecha.h"
 using namespace std;
 
@@ -80,43 +81,41 @@ do{
             }
 
 
-            switch(opcionBuscarTurno) {
-                case 1:{
-                    rlutil::cls();
-                    arcTurno.listarTodosLosTurnos();
-                    break;
-                }
-                case 2:{
-                    Fecha fecha;
-                    rlutil::cls();
-                    cout << "INGRESE FECHA" << endl;
-                    fecha.Cargar();
-                    arcTurno.listarTurnosPorFecha(fecha);
-                    break;
+                switch(opcionBuscarTurno) {
+                    case 1:{
+                        rlutil::cls();
+                        arcTurno.listarTodosLosTurnos();
+                        break;
                     }
-                case 3:{
-                    rlutil::cls();
-                    std::string idPac;
-                    cout<<"INGRESE DNI DEL PACIENTE: ";
-                    cin>> idPac;
-                    if(posBuscar>=0){
-                        arcTurno.listarTurnosPorPaciente(idPac);
-                    }else cout<<"Paciente no encontrado."<<endl;
-                    cout<<endl;
-                    break;
-                    }
-                case 0:
-                    cout << "Volviendo al menu anterior..." << endl;
-                    break;
+                    case 2:{
+                        Fecha fecha;
+                        rlutil::cls();
+                        cout << "INGRESE FECHA" << endl;
+                        fecha.Cargar();
+                        arcTurno.listarTurnosPorFecha(fecha);
+                        break;
+                        }
+                    case 3:{
+                        rlutil::cls();
+                        std::string idPac;
+                        cout<<"INGRESE DNI DEL PACIENTE: ";
+                        cin>> idPac;
+                        if(posBuscar>=0){
+                            arcTurno.listarTurnosPorPaciente(idPac);
+                        }else cout<<"Paciente no encontrado."<<endl;
+                        cout<<endl;
+                        break;
+                        }
+                    case 0:
+                        break;
 
-                default:
-                    cout << "Opcion invalida. Intente nuevamente." << endl;
-                    break;
+                    default:
+                        cout << "Opcion invalida. Intente nuevamente." << endl;
+                        break;
                 }
 
-                }while (opcionBuscarTurno!=0);
-
-                break;
+            }while (opcionBuscarTurno!=0);
+            break;
         }
         case 3:
             rlutil::cls();
@@ -141,12 +140,8 @@ do{
         break;
 
         case 0:
-            rlutil::cls();
-            cout<<"Volviendo al Menu Inicial";
-
-        return;
+            return;
     }
-    rlutil::anykey();
     }while (numeroInicio!=0);
 
 }
@@ -172,4 +167,3 @@ void solicitarTurnoMenu() {
 
     arcTurno.solicitarTurno(idMedico, idPaciente, fechaDesde, fechaHasta);
 }
-

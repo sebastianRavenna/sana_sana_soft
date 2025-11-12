@@ -109,5 +109,7 @@ void Agenda::mostrarAgenda(){
     cout << "Hora: ";
     _horaTurno.Mostrar();
     cout << "Asignado: " << (_asignado ? "OCUPADO" : "DISPONIBLE") << endl;
+
+    cout << "Estado: " << (_estado ? "DISPONIBLE" : "SUSPENDIDO") << endl;
     cout << "========================================" << endl;
 }
