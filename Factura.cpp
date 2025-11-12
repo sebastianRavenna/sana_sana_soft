@@ -2,11 +2,14 @@
 #include <cstring>
 #include "Factura.h"
 #include "Fecha.h"
-
+#include "ArchivoFactura.h"
+#include "Funciones.h"
 using namespace std;
 
+ArchivoFactura archivoF;
+
 Factura::Factura(){
-        _idFactura = 0; // Ver como hacer para que aumente de forma automatica
+        _idFactura = 0;
         _idMedico = 0;
         _codEspecialidad = 0;
         _fechaFactura = Fecha();
@@ -103,9 +106,10 @@ void Factura::cargar(){
     bool est;
     Fecha fechaAux;
 
-    cout<<"ID Factura: "; // Ver como hacer para que aumente de forma automatica
-    cin>>idFact;
+    cout<<"ID Factura: ";
+    idFact=archivoF.contarRegistro()+1;
     setIdFactura(idFact);
+    cout << getIdFactura();
     cout << endl;
 
     cout<<"Tipo de Factura: ";
@@ -138,13 +142,12 @@ void Factura::cargar(){
     setImporte(imp);
     cout << endl;
 
-    cout<<"Estado: ";
+    cout<<"Estado de Factura (1-Activo // 0-Inactivo): ";
     cin>>est;
     setEstado(est);
+
+archivoF.agregarRegistro(*this);
 }
 
-/*bool Factura::leer(){
-}
-bool Factura::escribir(){
-}*/
+
 

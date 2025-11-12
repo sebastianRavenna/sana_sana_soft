@@ -1,7 +1,8 @@
 #include<iostream>
 #include "rlutil.h"
 #include "menuPrincipal.h"
-#include "Factura.h"
+#include "ArchivoFactura.h"
+#include "Funciones.h"
 using namespace std;
 
 
@@ -11,6 +12,9 @@ void menuFacturacion(){
 char margenTitulo[]={"          "};
 char margenMenu[]={"                    "};
 int numeroInicio;
+int idFactura,posBuscar=0;
+ArchivoFactura archivoF;
+Factura factura;
 
 do{
     rlutil::cls();
@@ -39,22 +43,42 @@ do{
         cin>> numeroInicio;
     }
 
-    Factura factura;
+
     switch(numeroInicio){
         case 1:
+            cout << endl;
             rlutil::cls();
+            cout << "====== CREAR FACTURA ======" << endl;
             factura.cargar();
-            factura.mostrar();
+            cout << endl;
         break;
 
         case 2:
-            rlutil::cls();
-            cout<<"BUSCAR FACTURA";
+             rlutil::cls();
+            cout << "====== BUSCAR FACTURA ======" << endl;
+            cout << "INGRESE ID DE LA FACTURA: " << endl;
+            cin >> idFactura;
+            posBuscar=archivoF.buscarFactura(idFactura);
+            if(posBuscar>=0){
+                factura=archivoF.leerFactura(posBuscar);
+                factura.mostrar();
+            }
+            else cout << "No existe una factura con ese ID." << endl;
+
         break;
 
+
+
         case 3:
-            rlutil::cls();
-            cout<<"MODIFICAR FACTURA";
+               rlutil::cls();
+            cout << "====== MODIFICAR FACTURA ======" << endl;
+            cout << "INGRESE ID DE LA FACTURA: " << endl;
+            cin >> idFactura;
+            posBuscar=archivoF.buscarFactura(idFactura);
+            if(posBuscar>=0){
+                archivoF.modificarFactura(posBuscar);
+            }
+            else cout << "No existe una factura con ese ID" << endl;
         break;
 
         case 0:

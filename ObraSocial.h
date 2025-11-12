@@ -1,5 +1,5 @@
 #pragma once
-#include <cstring>
+//#include <cstring>
 #include <string>
 class ObraSocial{
     private:
@@ -12,8 +12,7 @@ class ObraSocial{
 
         void cargar();
         void mostrar();
-        bool escribir();
-        bool leer();
+
         int getIdObraSocial();
         std::string getNombreObraSocial()const;
         bool getEstado();
