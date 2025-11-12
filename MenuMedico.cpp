@@ -133,12 +133,12 @@ do{
         break;
 
         case 0:
-            rlutil::cls();
-            cout<<"Volviendo al Menu Inicial";
+            //rlutil::cls();
+            return;
+        break;
 
-        return;
     }
-    rlutil::anykey();
+
     }while (numeroInicio!=0);
 
 }

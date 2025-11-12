@@ -107,6 +107,9 @@ return true;
 
 bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
     Medico reg;
+    ArchivoMedico archivoMedico;
+    ArchivoEspecialidad archivoEspecialidad;
+
     FILE* pMedico=fopen(_nombreArchivo.c_str(), "rb+");
         if (pMedico==NULL){
             cout<<"ERROR EN EL ARCHIVO"<<endl;
@@ -150,8 +153,6 @@ bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
         cin.ignore();
     }
 
-    ArchivoMedico archivoMedico;
-    ArchivoEspecialidad archivoEspecialidad;
 
     switch(opcionModificar) {
         case 1:{
@@ -290,7 +291,7 @@ bool ArchivoMedico::modificarRegistro(const std::string _idPaciente, int pos2){
             break;
 
         case 0:
-            menuMedico();
+           // menuMedico();
             break;
 
         default:
