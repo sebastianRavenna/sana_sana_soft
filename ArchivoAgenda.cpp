@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "Medico.h"
+#include "Especialidad.h"
 #include "ArchivoAgenda.h"
 #include "Agenda.h"
 #include "Funciones.h"
@@ -106,7 +108,7 @@ bool ArchivoAgenda::cambioEstado(const std::string &idMedico, Fecha fechaDesde,
     }
     fclose(pArchivo);
     if (contador>0){
-    cout<<"La Agenda fue Suspendida en el sistema: "<<contador<<endl;
+    cout<<"La Agenda fue Suspendida en el sistema, anulando "<<contador<<" slots."<<endl;
     system("pause");
     }
     return true;
@@ -243,5 +245,56 @@ bool ArchivoAgenda::listarAgendaPorMedicoRangoFecha(const std::string &idMedico,
     fclose(pArchivo);
     system("pause");
     return true;
+}
+
+bool validarIdMedico(const std::string &idMedico){
+    FILE* pArchivo = fopen("medico.dat", "rb");
+    if (pArchivo==NULL){
+        cout<<"ERROR EN EL ARCHIVO"<<endl;
+        return false;
+    }
+
+    std::string idBuscado = "M-" + idMedico;
+    Medico medico;
+
+    while(fread(&medico, sizeof(Medico), 1, pArchivo) == 1) {
+        if(medico.getIdMedico() == idBuscado && medico.getEstado()) {
+            fclose(pArchivo);
+            return true;
+        }
+    }
+    fclose(pArchivo);
+    return false;
+}
+
+std::string ArchivoTurno::obtenerNombreMedico(const std::string &idMedico){
+    FILE* pArchivo = fopen("medico.dat", "rb");
+    if (pArchivo==NULL){
+        cout<<"ERROR EN EL ARCHIVO"<<endl;
+    }
+
+    Medico medico;
+    while(fread(&medico, sizeof(Medico), 1, pArchivo) == 1) {
+        if(medico.getIdMedico() == idMedico) {
+            fclose(pArchivo);
+            return medico.getNombre() + " " + medico.getApellido();
+        }
+    }
+    fclose(pArchivo);
+}
+
+
+std::string obtenerDescripcionEspecialidad(int codEspecialidad){
+    FILE* pArchivo = fopen("especialidad.dat", "rb");
+    if (pArchivo == NULL) return "Especialidad no encontrada";
+
+    Especialidad esp;
+    while(fread(&esp, sizeof(Especialidad), 1, pArchivo) == 1) {
+        if(esp.getCodEspecialidad() == codEspecialidad) {
+            fclose(pArchivo);
+            return esp.getDescripcion();
+        }
+    }
+    fclose(pArchivo);
 }
 

@@ -3,6 +3,7 @@
 #include "Agenda.h"
 #include "Hora.h"
 #include "Fecha.h"
+#include "ArchivoTurno.h"
 
 class ArchivoAgenda
 {
@@ -13,6 +14,10 @@ class ArchivoAgenda
         Agenda leerRegistro(int tamRegistro);
         //hbool modificarRegistro(Agenda agenda, int pos2);
         int contarRegistros();
+
+        bool validarIdMedico(const std::string &idMedico);
+        std::string obtenerDescripcionEspecialidad(int codEspecialidad);
+        std::string obtenerNombreMedico(const std::string &idMedico);
 
         void generarAgenda(const std::string &idMedico, int codEspecialidad,
                            Fecha fecha, Hora horaInicio, Hora horaFin);
@@ -25,7 +30,6 @@ class ArchivoAgenda
         bool listarAgendaPorFecha(Fecha fecha);
         bool listarAgendaPorRangoFecha(Fecha fechaDesde, Fecha fechaHasta);
         bool listarAgendaPorMedicoRangoFecha(const std::string &idMedico,Fecha fechaDesde, Fecha fechaHasta);
-
 
   private:
         std::string _nombreArchivo;

@@ -186,20 +186,29 @@ void crearAgendaDia(){
     cout << "ID del Medico: ";
     cin >> idMedico;
 
-    cout << "Codigo de Especialidad: ";
-    cin >> codEspecialidad;
+    if(arcAgenda.validarIdMedico(idMedico)){
 
-    cout << "\nFecha de atencion:" << endl;
-    fecha.Cargar();
+        string nombreMedico = "M-" + idMedico;
+        cout << "Medico: " << arcAgenda.obtenerNombreMedico(nombreMedico) << endl;
 
-    cout << "\nHora de INICIO de atencion:" << endl;
-    horaInicio.Cargar();
+        cout << "Codigo de Especialidad: ";
+        cin >> codEspecialidad;
 
-    cout << "\nHora de FIN de atencion:" << endl;
-    horaFin.Cargar();
+        cout << "\nFecha de atencion:" << endl;
+        fecha.Cargar();
 
-    arcAgenda.ArchivoAgenda::generarAgenda(idMedico, codEspecialidad, fecha,
-                                           horaInicio, horaFin);
+        cout << "\nHora de INICIO de atencion:" << endl;
+        horaInicio.Cargar();
+
+        cout << "\nHora de FIN de atencion:" << endl;
+        horaFin.Cargar();
+
+        arcAgenda.ArchivoAgenda::generarAgenda(idMedico, codEspecialidad, fecha,
+                                               horaInicio, horaFin);
+        }else {
+            cout << "El medico con DNI " << idMedico << " no existe" << endl;
+            system("pause");
+        }
 }
 
 void crearAgendaRango() {
