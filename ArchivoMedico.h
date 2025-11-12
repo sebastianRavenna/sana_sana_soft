@@ -16,6 +16,7 @@ class ArchivoMedico
         bool modificarRegistro(const std::string _idMedico, int pos);
         bool cambioEstado(const std::string _idPaciente, int pos);
         bool listarMedicos();
+        int buscarPorMatricula(int matricula);
         //bool bajaLogica(std::string idMedico);
         //bool altaLogica(std::string idMedico);
 
