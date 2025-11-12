@@ -30,7 +30,7 @@ void Paciente::setIdPaciente(const string &idPaciente){
 }
 
 void Paciente::cargar(){
-    cout << "DNI: " << endl;
+    cout << "DNI: ";
     setDNI(cargarCadena());
     setIdPersona(getDNI());
     cout << endl;
@@ -56,5 +56,5 @@ void Paciente::mostrar(){
     cout << "Id Paciente: " << getIdPaciente() << endl;
     Persona::mostrar();
     cout << "Obra Social: " << getIdObraSocial() << endl<<endl;
-    cout <<"======================" << endl<<endl;
+    cout <<"==============================" << endl<<endl;
 }

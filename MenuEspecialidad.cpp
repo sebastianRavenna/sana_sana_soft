@@ -3,6 +3,7 @@
 #include "Especialidad.h"
 #include "ArchivoEspecialidad.h"
 #include "MenuModificarEspecialidad.h"
+#include "MenuMedico.h"
 using namespace std;
 
 
@@ -164,8 +165,9 @@ do{
 }
 
         case 0:
-            rlutil::cls();
-            cout<<"Volviendo al Menu Inicial";
+            //rlutil::cls();
+            //cout<<"Volviendo al Menu Inicial";
+            menuMedico();
 
         return;
     }

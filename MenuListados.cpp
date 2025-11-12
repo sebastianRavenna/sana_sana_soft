@@ -86,16 +86,20 @@ do{
             else if(numeroInicio == 2){
                     rlutil::cls();
                     cout<<"=== PACIENTES ACTIVOS ORDENADOS POR APELLIDO ==="<<endl<<endl;
-                    //METODO
+                    archivoPacientes.listarActivoPorApellido();
                     cout<<endl<<endl;
                     cout<<"Presione ENTER para continuar...";
                     }
             else if(numeroInicio == 3){
                     rlutil::cls();
                     cout<<"=== PACIENTES INACTIVOS ORDENADOS POR APELLIDO ==="<<endl<<endl;
-                    //METODO
+                    archivoPacientes.listarInactivoPorApellido();
                     cout<<endl<<endl;
                     cout<<"Presione ENTER para continuar...";
+            }
+            else if(numeroInicio == 0){
+                    rlutil::cls();
+                    menuListado();
             }
             else{
                     cout<<"Opcion no valida."<<endl<<endl;
@@ -140,6 +144,10 @@ do{
                     cout<<endl<<endl;
                     cout<<"Presione ENTER para continuar...";
             }
+            else if(numeroInicio == 0){
+                    rlutil::cls();
+                    menuListado();
+            }
             else{
                     cout<<"Opcion no valida."<<endl<<endl;
                     cout<<"Presione ENTER para continuar...";
@@ -180,6 +188,15 @@ do{
                     cout<<endl<<endl;
                     cout<<"Presione ENTER para continuar...";
                     }
+            else if(numeroInicio == 0){
+                    rlutil::cls();
+                    menuListado();
+            }
+            else{
+                    cout<<"Opcion no valida."<<endl<<endl;
+                    cout<<"Presione ENTER para continuar...";
+            }
+
         break;
 
         case 6:

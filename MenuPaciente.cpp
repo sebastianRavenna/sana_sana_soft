@@ -59,7 +59,7 @@ do{
         case 1:
             cout<<endl;
             rlutil::cls();
-            cout << "\n=== ALTA DE PACIENTE ===" << endl;
+            cout << "\n=== ALTA DE PACIENTE ===" << endl<<endl;
             paciente.cargar();
             cout<<endl;
         break;

@@ -14,6 +14,8 @@ class ArchivoPaciente
         bool cambioEstado(const std::string _idPaciente, int pos2);//Baja Paciente
         bool listarPacientes();
         bool listarTodoPorApellido();
+        bool listarActivoPorApellido();
+        bool listarInactivoPorApellido();
 
 
         int contarRegistros();

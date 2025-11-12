@@ -199,6 +199,7 @@ bool ArchivoPaciente::cambioEstado(const std::string _idPaciente, int pos2){
     fseek(pPaciente, pos2 * tamanioRegistro, 0);
     fread(&pac, tamanioRegistro, 1, pPaciente);
 
+    cout<<endl;
     cout<<"Paciente: "<<pac.getNombre()<<" "<<pac.getApellido()<<endl;
     cout<<"Estado: "<<(pac.getEstado() ? "Activo" : "Inactivo")<<" "<<endl;
     int opcCambio;
@@ -208,6 +209,7 @@ bool ArchivoPaciente::cambioEstado(const std::string _idPaciente, int pos2){
         cin.ignore();
         if(opcCambio==1){
             nuevoEstado = false;
+            cout<<endl;
             cout<<"El paciente fue dado de Baja en el sistema"<<endl;
         }
     }else{
@@ -216,6 +218,7 @@ bool ArchivoPaciente::cambioEstado(const std::string _idPaciente, int pos2){
         cin.ignore();
         if(opcCambio==1){
             nuevoEstado = true;
+            cout<<endl;
             cout<<"El paciente fue dado de Alta en el sistema"<<endl;
         }
     }
@@ -284,18 +287,18 @@ bool ArchivoPaciente::listarTodoPorApellido(){
     vectorPacientes = new Paciente[tam];
 
     Paciente pac;
-    FILE* pEspecialidad = fopen(_nombreArchivo.c_str(), "rb");
-    if(pEspecialidad == NULL){
+    FILE* pPaciente = fopen(_nombreArchivo.c_str(), "rb");
+    if(pPaciente == NULL){
         cout<<"Error en el Archivo"<<endl;
         delete[] vectorPacientes;
         return false;
     }
     int i=0;
-    while(fread(&pac, tamanioRegistro, 1, pEspecialidad)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
+    while(fread(&pac, tamanioRegistro, 1, pPaciente)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
         vectorPacientes[i] = pac;
         i++;
     }
-    fclose(pEspecialidad);
+    fclose(pPaciente);
 
     for(int i=0; i<tam - 1; i++ ){ //aca va tam-1, porque tomamos un valor del vector y lo comparamos con el siguiente para ver cual es el menor. Si el vector llega a su ultimo elemento, no va a tener un "siguiente" contra quien compararse y por eso va a dar error. Por eso, la iteracion solo llega hasta el penultimo valor del vector
         int indexmenor = i;
@@ -314,10 +317,113 @@ bool ArchivoPaciente::listarTodoPorApellido(){
     }
     for(int i=0; i<tam; i++){
         vectorPacientes[i].mostrar();
-        cout<<"------------------------------"<<endl;
-        cout<<endl;
+       // cout<<"------------------------------"<<endl;
+       // cout<<endl;
     }
     delete[] vectorPacientes;
     return true;
 }
+
+
+bool ArchivoPaciente::listarActivoPorApellido(){
+    int tam = contarRegistros();
+    if(tam == 0){
+        cout<<"No hay registros para listar"<<endl<<endl;
+        return true;
+    }
+    //necesitamos si o si un vector dinamico para poder ordenar
+    Paciente *vectorPacientes;
+    vectorPacientes = new Paciente[tam];
+
+    Paciente pac;
+    FILE* pPaciente = fopen(_nombreArchivo.c_str(), "rb");
+    if(pPaciente == NULL){
+        cout<<"Error en el Archivo"<<endl;
+        delete[] vectorPacientes;
+        return false;
+    }
+    int contadorActivos = 0;
+    while(fread(&pac, tamanioRegistro, 1, pPaciente)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
+        if(pac.getEstado()){
+        vectorPacientes[contadorActivos] = pac;
+        contadorActivos++;
+        }
+    }
+    fclose(pPaciente);
+
+    for(int i=0; i<contadorActivos - 1; i++ ){ //aca va contadorActivos-1, porque tomamos un valor del vector y lo comparamos con el siguiente para ver cual es el menor. Si el vector llega a su ultimo elemento, no va a tener un "siguiente" contra quien compararse y por eso va a dar error. Por eso, la iteracion solo llega hasta el penultimo valor del vector
+        int indexmenor = i;
+
+        for(int j=i+1; j<contadorActivos; j++){ // aca va j=i+1, porque es la manera de "llamar" al valor siguiente de i para poder hacer la comparacion. Tambien va j<contadorActivos, porque necesita llegar al ultimo valor del vector para compararlo con i (que llega hasta el penultimo valor del vector)
+            string nombreJ = vectorPacientes[j].getApellido();
+            string nombreMenor = vectorPacientes[indexmenor].getApellido();
+
+            if(nombreJ<nombreMenor){
+                indexmenor = j;
+            }
+        }
+        Paciente pacAux = vectorPacientes[i];
+        vectorPacientes[i] = vectorPacientes[indexmenor];
+        vectorPacientes[indexmenor] = pacAux;
+    }
+    for(int i=0; i<contadorActivos; i++){
+        vectorPacientes[i].mostrar();
+       // cout<<"------------------------------"<<endl;
+       // cout<<endl;
+    }
+    delete[] vectorPacientes;
+    return true;
+}
+
+bool ArchivoPaciente::listarInactivoPorApellido(){
+    int tam = contarRegistros();
+    if(tam == 0){
+        cout<<"No hay registros para listar"<<endl<<endl;
+        return true;
+    }
+    //necesitamos si o si un vector dinamico para poder ordenar
+    Paciente *vectorPacientes;
+    vectorPacientes = new Paciente[tam];
+
+    Paciente pac;
+    FILE* pPaciente = fopen(_nombreArchivo.c_str(), "rb");
+    if(pPaciente == NULL){
+        cout<<"Error en el Archivo"<<endl;
+        delete[] vectorPacientes;
+        return false;
+    }
+    int contadorInactivos=0;
+    while(fread(&pac, tamanioRegistro, 1, pPaciente)== 1){ // vamos copiando el contenido del archivoHistoriaClinica en el vector dinamico que creamos
+        if(!pac.getEstado()){
+        vectorPacientes[contadorInactivos] = pac;
+        contadorInactivos++;
+        }
+    }
+    fclose(pPaciente);
+
+    for(int i=0; i<contadorInactivos - 1; i++ ){ //aca va contadorInactivos-1, porque tomamos un valor del vector y lo comparamos con el siguiente para ver cual es el menor. Si el vector llega a su ultimo elemento, no va a tener un "siguiente" contra quien compararse y por eso va a dar error. Por eso, la iteracion solo llega hasta el penultimo valor del vector
+        int indexmenor = i;
+
+        for(int j=i+1; j<contadorInactivos; j++){ // aca va j=i+1, porque es la manera de "llamar" al valor siguiente de i para poder hacer la comparacion. Tambien va j<contadorInactivos, porque necesita llegar al ultimo valor del vector para compararlo con i (que llega hasta el penultimo valor del vector)
+            string nombreJ = vectorPacientes[j].getApellido();
+            string nombreMenor = vectorPacientes[indexmenor].getApellido();
+
+            if(nombreJ<nombreMenor){
+                indexmenor = j;
+            }
+        }
+        Paciente pacAux = vectorPacientes[i];
+        vectorPacientes[i] = vectorPacientes[indexmenor];
+        vectorPacientes[indexmenor] = pacAux;
+    }
+    for(int i=0; i<contadorInactivos; i++){
+        vectorPacientes[i].mostrar();
+       // cout<<"------------------------------"<<endl;
+       // cout<<endl;
+    }
+    delete[] vectorPacientes;
+    return true;
+}
+
+
 
