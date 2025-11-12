@@ -23,7 +23,9 @@ class Fecha{
     bool esBisiesto(int anio);
     int diasEnMes(int mes, int anio);
     bool verificarFecha();
-    bool esMasAntigua(Fecha fecha2);
-
+    bool esIgual(Fecha fecha2);
+    bool esIgualOMenor(Fecha fecha2);
+    Fecha sumarUnDia();
+    int getDiaSemana();
     std::string toString();
 };
