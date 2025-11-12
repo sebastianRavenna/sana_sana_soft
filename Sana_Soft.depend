@@ -358,3 +358,331 @@
 
 1761762239 c:\archivos\programacion\utn pacheco\2do cuatri\programacion ii\tpi\github sssoft\sana_sana_soft\menuespecialidad.h
 
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\agenda.cpp
+	<iostream>
+	<cstring>
+	"Agenda.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\agenda.h
+	<string>
+	"Fecha.h"
+	"Hora.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\fecha.h
+	<string>
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\hora.h
+	<string>
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoagenda.cpp
+	<iostream>
+	<string>
+	"ArchivoAgenda.h"
+	"Agenda.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoagenda.h
+	<string>
+	"Agenda.h"
+	"Hora.h"
+	"Fecha.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\funciones.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoespecialidad.cpp
+	<string>
+	"ArchivoEspecialidad.h"
+	<iostream>
+	"Especialidad.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoespecialidad.h
+	<string>
+	"Especialidad.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\especialidad.h
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivohistoriaclinica.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ArchivoHistoriaClinica.h"
+	"HistoriaClinica.h"
+	"Fecha.h"
+	"Funciones.h"
+	"Medico.h"
+	"ArchivoMedico.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivohistoriaclinica.h
+	<string>
+	"HistoriaClinica.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\historiaclinica.h
+	<string>
+	"Fecha.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\medico.h
+	"Persona.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\persona.h
+	<string>
+	"Fecha.h"
+	"Hora.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivomedico.h
+	<string>
+	"Medico.h"
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivomedico.cpp
+	<iostream>
+	<string>
+	"ArchivoMedico.h"
+	"Medico.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivopaciente.cpp
+	<iostream>
+	<string>
+	"ArchivoPaciente.h"
+	"Paciente.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivopaciente.h
+	<string>
+	"Paciente.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\paciente.h
+	<string>
+	"Persona.h"
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivopersona.cpp
+	"ArchivoPersona.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivopersona.h
+	<string>
+	"Persona.h"
+
+1762940533 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoturno.cpp
+	<iostream>
+	<string>
+	"ArchivoAgenda.h"
+	"ArchivoTurno.h"
+	"Agenda.h"
+	"rlutil.h"
+
+1762919138 c:\users\julie\desktop\tp programacion\sana_sana_soft\archivoturno.h
+	<string>
+	"Turno.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\turno.h
+	<string>
+	"Fecha.h"
+	"Hora.h"
+
+1762919138 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\especialidad.cpp
+	<iostream>
+	<cstring>
+	"Especialidad.h"
+	"Funciones.h"
+
+1762940533 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\funciones.cpp
+	<string>
+	<iostream>
+	"Funciones.h"
+	<ctime>
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\historiaclinica.cpp
+	<iostream>
+	<cstring>
+	"HistoriaClinica.h"
+	"Funciones.h"
+	"ArchivoHistoriaClinica.h"
+	"Fecha.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\hora.cpp
+	<iostream>
+	<string>
+	"Hora.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\main.cpp
+	<iostream>
+	"menuPrincipal.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuprincipal.h
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\medico.cpp
+	<iostream>
+	<cstring>
+	"Medico.h"
+	"Funciones.h"
+	"ArchivoMedico.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menuagenda.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"menuAgenda.h"
+	"ArchivoAgenda.h"
+	"Fecha.h"
+	"Hora.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuagenda.h
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menuespecialidad.cpp
+	<iostream>
+	"rlutil.h"
+	"Especialidad.h"
+	"ArchivoEspecialidad.h"
+	"MenuModificarEspecialidad.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menumodificarespecialidad.h
+	"Especialidad.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menuhistoriaclinica.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+	"menuHistoriaClinica.h"
+	"HistoriaClinica.h"
+	"ArchivoHistoriaClinica.h"
+	"ArchivoPaciente.h"
+	"funciones.h"
+	"MenuModificarHistoriaClinica.h"
+	"ArchivoMedico.h"
+	"Medico.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuhistoriaclinica.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menumodificarhistoriaclinica.h
+	"HistoriaClinica.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menulistados.cpp
+	<iostream>
+	"rlutil.h"
+	"ArchivoPaciente.h"
+	"ArchivoEspecialidad.h"
+	"ArchivoHistoriaClinica.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menumedico.cpp
+	<iostream>
+	"rlutil.h"
+	<string>
+	"menuEspecialidad.h"
+	"Medico.h"
+	"ArchivoMedico.h"
+	"Funciones.h"
+	"MenuAgenda.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuespecialidad.h
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menumodificarespecialidad.cpp
+	<iostream>
+	<string>
+	"MenuModificarEspecialidad.h"
+	"Especialidad.h"
+	"Funciones.h"
+	"rlutil.h"
+	"ArchivoEspecialidad.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menumodificarhistoriaclinica.cpp
+	<iostream>
+	<string>
+	"MenuModificarHistoriaClinica.h"
+	"HistoriaClinica.h"
+	"Fecha.h"
+	"Funciones.h"
+	"rlutil.h"
+	"ArchivoPaciente.h"
+	"Paciente.h"
+	"ArchivoMedico.h"
+	"Medico.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menupaciente.cpp
+	<iostream>
+	"rlutil.h"
+	"string"
+	"Paciente.h"
+	"ArchivoPaciente.h"
+	"menuHistoriaClinica.h"
+	"Funciones.h"
+	"ArchivoHistoriaClinica.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"MenuPrincipal.h"
+	"MenuFacturacion.h"
+	"MenuListados.h"
+	"MenuMedico.h"
+	"MenuObraSocial.h"
+	"MenuPaciente.h"
+	"MenuReportes.h"
+	"MenuTurno.h"
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menufacturacion.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menulistados.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menumedico.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuobrasocial.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menupaciente.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menureportes.h
+
+1762919139 c:\users\julie\desktop\tp programacion\sana_sana_soft\menuturno.h
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menureportes.cpp
+	<iostream>
+	"rlutil.h"
+	"menuPrincipal.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\menuturno.cpp
+	<iostream>
+	<string>
+	"rlutil.h"
+	"menuTurno.h"
+	"ArchivoTurno.h"
+	"Fecha.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\paciente.cpp
+	<iostream>
+	<cstring>
+	"Paciente.h"
+	"Funciones.h"
+	"ArchivoPaciente.h"
+
+1762919139 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\persona.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"Persona.h"
+	"Funciones.h"
+
+1762940533 source:c:\users\julie\desktop\tp programacion\sana_sana_soft\turno.cpp
+	<iostream>
+	<cstring>
+	"Turno.h"
+

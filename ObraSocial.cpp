@@ -3,8 +3,10 @@
 #include <iostream>
 #include "ObraSocial.h"
 #include "Funciones.h"
+#include "ArchivoObraSocial.h"
 
 using namespace std;
+ArchivoObraSocial archivoOS;
 
 ObraSocial::ObraSocial(){
         _idObraSocial = 0;
@@ -37,18 +39,21 @@ void ObraSocial::setEstado(bool estado){
 }
 
 void ObraSocial::cargar(){
-    int id;
+    int idOS;;
     string nom;
     bool est;
 
     cout<<"Nombre de Obra Social: ";
     setNombreObraSocial(cargarCadena());
     cout<<"ID de Obra Social: ";
-    cin>>id;
-    setIdObraSocial(id);
+    idOS=archivoOS.contarRegistro()+1;
+    setIdObraSocial(idOS);
+    cout << getIdObraSocial();
+    cout << endl;
     cout<<"Estado de Obra Social (1-Activo // 0-Inactivo): ";
     cin>>est;
     setEstado(est);
+    archivoOS.agregarRegistro(*this);
     }
 
 void ObraSocial::mostrar(){
@@ -63,10 +68,7 @@ void ObraSocial::mostrar(){
     }
 }
 
-/*bool ObraSocial::leer(){
-}
-bool ObraSocial::escribir(){
-}*/
+
 
 
 

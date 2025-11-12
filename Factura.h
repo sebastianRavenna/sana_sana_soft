@@ -17,8 +17,7 @@ class Factura
 
         void cargar();
         void mostrar(); //ok
-        bool escribir();
-        bool leer();
+
         int getIdFactura(); //okk
         int getIdMedico(); //okk
         int getCodEspecialidad(); //okk

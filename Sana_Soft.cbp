@@ -40,10 +40,13 @@
 		<Unit filename="ArchivoAgenda.h" />
 		<Unit filename="ArchivoEspecialidad.cpp" />
 		<Unit filename="ArchivoEspecialidad.h" />
+		<Unit filename="ArchivoFactura.cpp" />
 		<Unit filename="ArchivoHistoriaClinica.cpp" />
 		<Unit filename="ArchivoHistoriaClinica.h" />
 		<Unit filename="ArchivoMedico.cpp" />
 		<Unit filename="ArchivoMedico.h" />
+		<Unit filename="ArchivoObraSocial.cpp" />
+		<Unit filename="ArchivoObraSocial.h" />
 		<Unit filename="ArchivoPaciente.cpp" />
 		<Unit filename="ArchivoPaciente.h" />
 		<Unit filename="ArchivoPersona.cpp" />
