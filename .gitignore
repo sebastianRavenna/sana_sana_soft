@@ -1,0 +1,8 @@
+# Ignorar carpetas generadas por Code::Blocks
+/bin/
+/obj/
+
+# Ignorar archivos temporales y de configuración del IDE
+*.depend
+*.layout
+*.rar
